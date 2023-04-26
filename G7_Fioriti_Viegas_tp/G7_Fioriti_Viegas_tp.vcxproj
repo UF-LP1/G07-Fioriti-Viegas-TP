@@ -17,7 +17,6 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -53,27 +52,24 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared" >
+  <ImportGroup Label="Shared">
   </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -130,8 +126,56 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Model\articulos - copia.cpp" />
+    <ClCompile Include="..\..\Model\articulos.cpp" />
+    <ClCompile Include="..\..\Model\carrito.cpp" />
+    <ClCompile Include="..\..\Model\cliente.cpp" />
+    <ClCompile Include="..\..\Model\cotillon.cpp" />
+    <ClCompile Include="..\..\Model\cumpleanios.cpp" />
+    <ClCompile Include="..\..\Model\disfraces.cpp" />
+    <ClCompile Include="..\..\Model\empleado.cpp" />
+    <ClCompile Include="..\..\Model\encargado.cpp" />
+    <ClCompile Include="..\..\Model\establecimiento.cpp" />
+    <ClCompile Include="..\..\Model\globos.cpp" />
+    <ClCompile Include="..\..\Model\golosinas.cpp" />
+    <ClCompile Include="..\..\Model\mantel.cpp" />
+    <ClCompile Include="..\..\Model\manteles.cpp" />
+    <ClCompile Include="..\..\Model\persona.cpp" />
+    <ClCompile Include="..\..\Model\reposteria.cpp" />
+    <ClCompile Include="..\..\Model\trabajador.cpp" />
+    <ClCompile Include="..\..\Model\vajilla_descartable.cpp" />
+    <ClCompile Include="..\..\Model\vela.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Model\articulos.h" />
+    <ClInclude Include="..\..\Model\articulos_cotillon.h" />
+    <ClInclude Include="..\..\Model\carrito.h" />
+    <ClInclude Include="..\..\Model\cliente.h" />
+    <ClInclude Include="..\..\Model\cotillon.h" />
+    <ClInclude Include="..\..\Model\cumpleanios.h" />
+    <ClInclude Include="..\..\Model\decoracion_repostera.h" />
+    <ClInclude Include="..\..\Model\disfraces.h" />
+    <ClInclude Include="..\..\Model\empleado.h" />
+    <ClInclude Include="..\..\Model\encargado.h" />
+    <ClInclude Include="..\..\Model\Enumeration1.h" />
+    <ClInclude Include="..\..\Model\establecimiento.h" />
+    <ClInclude Include="..\..\Model\globos.h" />
+    <ClInclude Include="..\..\Model\golosinas.h" />
+    <ClInclude Include="..\..\Model\librerias.h" />
+    <ClInclude Include="..\..\Model\mantel.h" />
+    <ClInclude Include="..\..\Model\manteles.h" />
+    <ClInclude Include="..\..\Model\matel.h" />
+    <ClInclude Include="..\..\Model\medio_de_pago.h" />
+    <ClInclude Include="..\..\Model\molde.h" />
+    <ClInclude Include="..\..\Model\persona.h" />
+    <ClInclude Include="..\..\Model\reposteria.h" />
+    <ClInclude Include="..\..\Model\talles.h" />
+    <ClInclude Include="..\..\Model\trabajador.h" />
+    <ClInclude Include="..\..\Model\vajilla.h" />
+    <ClInclude Include="..\..\Model\vajilla_descartable.h" />
+    <ClInclude Include="..\..\Model\vela.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
