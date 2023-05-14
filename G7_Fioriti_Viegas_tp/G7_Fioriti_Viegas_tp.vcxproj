@@ -157,7 +157,6 @@
     <ClInclude Include="..\..\Model\disfraces.h" />
     <ClInclude Include="..\..\Model\empleado.h" />
     <ClInclude Include="..\..\Model\encargado.h" />
-    <ClInclude Include="..\..\Model\Enumeration1.h" />
     <ClInclude Include="..\..\Model\establecimiento.h" />
     <ClInclude Include="..\..\Model\globos.h" />
     <ClInclude Include="..\..\Model\golosinas.h" />
