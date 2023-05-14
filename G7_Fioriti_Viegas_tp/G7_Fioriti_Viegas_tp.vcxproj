@@ -144,6 +144,7 @@
     <ClCompile Include="..\..\Model\trabajador.cpp" />
     <ClCompile Include="..\..\Model\vajilla_descartable.cpp" />
     <ClCompile Include="..\..\Model\vela.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Model\articulos.h" />
