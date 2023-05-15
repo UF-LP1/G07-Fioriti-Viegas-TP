@@ -163,7 +163,6 @@
     <ClInclude Include="..\..\Model\librerias.h" />
     <ClInclude Include="..\..\Model\mantel.h" />
     <ClInclude Include="..\..\Model\manteles.h" />
-    <ClInclude Include="..\..\Model\matel.h" />
     <ClInclude Include="..\..\Model\medio_de_pago.h" />
     <ClInclude Include="..\..\Model\molde.h" />
     <ClInclude Include="..\..\Model\persona.h" />

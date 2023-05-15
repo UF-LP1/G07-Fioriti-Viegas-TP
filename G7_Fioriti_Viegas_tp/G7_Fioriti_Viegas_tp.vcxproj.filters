@@ -119,9 +119,6 @@
     <ClInclude Include="..\..\Model\manteles.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Model\matel.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Model\medio_de_pago.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>

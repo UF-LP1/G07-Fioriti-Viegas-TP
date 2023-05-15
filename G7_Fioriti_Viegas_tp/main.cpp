@@ -1,23 +1,22 @@
 #include <iostream>
 #include <forward_list>
 #include <string>
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/Model/cotillon.h"
+#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/cotillon.h"
+#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/cliente.h"
 
 using namespace std;
-
 int main() {
 
-    cotillon producto((float)10.0, 20, "disfrazate", mascara);
-    forward_list<articulos> algo{
-        {10.0, 20,"difrazate", "mascara"},
-        {1.20, 5,"cotimillon", "papel_picado"},
-        {15.0, 20,"espumin", "espuma"},
-        {20.0, 10,"ilumina", "fluorecente"}
-        //{"Confeti", "Confetitos", 0.80, 8}
-    };
-    
-    forward_list<articulos> miCarrito;
-
+    cotillon producto(10.0, 20, "disfrazate", mascara);
+    cotillon producto1(14.5, 15, "papelito", papel_picado);
+    cotillon producto2(5.0, 30, "laLuz", fluorescentes);
+    cotillon producto3(2.3, 13, "espumin", espuma);
+    forward_list<articulos> lista;
+    lista.push_front(producto);
+    lista.push_front(producto1);
+    lista.push_front(producto2);
+    lista.push_front(producto3);
+    cliente pedro("Pedro", "Marquez", "45428877", "marquezbest@gmail.com", "imagen.jpg");
     string nombreBuscado, marcaBuscada;
     int cantidadBuscada;
 
@@ -29,24 +28,7 @@ int main() {
     cin >> cantidadBuscada;
 
     // Buscamos el producto deseado en la lista de productos
-    auto itProducto = buscarProductoCotillon(listaProductos, nombreBuscado, marcaBuscada);
-
-    // Si encontramos el producto y hay suficiente stock disponible
-    if (itProducto != listaProductos.end()) {
-        // Calculamos el precio total de los productos deseados
-        float precioTotal = itProducto->getPrecio() * cantidadBuscada;
-
-        // Agregamos los productos deseados a MiCarrito
-        miCarrito.emplace_front(itProducto->getNombre(), itProducto->getMarca(), itProducto->getPrecio(), cantidadBuscada);
-
-        // Reducimos el stock de la lista de productos principal
-        itProducto->reducirStock(cantidadBuscada);
-
-        cout << "Se agregaron " << cantidadBuscada << " productos al carrito por un precio total de $" << precioTotal << endl;
-    }
-    else {
-        cout << "No se encontró el producto deseado o no hay suficiente stock disponible" << endl;
-    }
+    pedro.agregar_carrito(lista, nombreBuscado, marcaBuscada, cantidadBuscada);
 
     return 0;
 }
