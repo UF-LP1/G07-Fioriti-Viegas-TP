@@ -22,8 +22,8 @@ int main() {
     cotillon producto1(14.5, 15, "papelito", "papel_picado");
     cotillon producto2(5.0, 30, "laLuz", "fluorescentes");
     cotillon producto3(2.3, 13, "espumin", "espuma");
-    disfraces producto4(30.0, 3, "disfrazate");
-    globos producto5("amarillo", 20, 1.0, "chico", "bombucha");
+    disfraces producto4(30.0, 3, "disfrazate", "disfraz de batman", M);
+    globos producto5("amarillo", 20, 1.0, "chico", "bombucha",M);
     golosinas producto6("fellfort", 1.0, 50);
     manteles producto7(5.0, 5, "violeta", "10 m2", "mantelito");
     molde producto8;
@@ -47,7 +47,7 @@ int main() {
     getline(cin, talle);
 
     // Buscamos el producto deseado en la lista de productos
-    pedro.agregar_carrito(lista, nombreBuscado, marcaBuscada, cantidadBuscada, talle);
+    pedro.agregar_carrito(lista, nombreBuscado, marcaBuscada, cantidadBuscada);
 
     return 0;
 }
