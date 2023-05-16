@@ -23,25 +23,29 @@ int main() {
     disfraces producto4(30.0, 3, "disfrazate");
     globos producto5("amarillo", 20, 1.0, "chico", "bombucha");
     golosinas producto6("fellfort", 1.0, 50);
-    manteles producto7(precio, stock, color, tamanio, marca);
+    manteles producto7(5.0, 5, "violeta", "10 m2", "mantelito");
+    molde producto8;
     forward_list<articulos> lista;
     lista.push_front(producto);
-    lista.push_front(producto1);
-    lista.push_front(producto2);
-    lista.push_front(producto3);
+    lista.push_front(producto1); 
+    lista.push_front(producto2); 
+    lista.push_front(producto3); 
     cliente pedro("Pedro", "Marquez", "45428877", "marquezbest@gmail.com", "imagen.jpg");
     string nombreBuscado, marcaBuscada;
     int cantidadBuscada;
+    string talle;
 
-    cout << "Ingrese el nombre del producto que desea buscar: ";
+    cout << "Ingrese el nombre del producto que desea buscar: " << endl;
     getline(cin, nombreBuscado);
-    cout << "Ingrese la marca del producto que desea buscar: ";
+    cout << "Ingrese la marca del producto que desea buscar: " << endl;
     getline(cin, marcaBuscada);
-    cout << "Ingrese la cantidad de productos que desea: ";
+    cout << "Ingrese la cantidad de productos que desea: " << endl;
     cin >> cantidadBuscada;
+    cout << "Ingrese talle de ser necesario. Caso contrario, ingrese 0" << endl;
+    getline(cin, talle);
 
     // Buscamos el producto deseado en la lista de productos
-    pedro.agregar_carrito(lista, nombreBuscado, marcaBuscada, cantidadBuscada);
+    pedro.agregar_carrito(lista, nombreBuscado, marcaBuscada, cantidadBuscada, talle);
 
     return 0;
 }
