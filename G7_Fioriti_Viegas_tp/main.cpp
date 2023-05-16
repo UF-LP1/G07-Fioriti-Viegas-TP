@@ -3,6 +3,7 @@
 #include <iostream>
 #include <forward_list>
 #include <string>
+#include "cotillon.h"
 #include "cliente.h"
 #include "disfraces.h"
 #include "globos.h"
@@ -12,16 +13,15 @@
 #include "reposteria.h"
 #include "vajilla_descartable.h"
 #include "vela.h"
-#include "cotillon.h"
 
 using namespace std;
 
 int main() {
 
-    cotillon producto(10.0, 20, "disfrazate", mascara);
-    cotillon producto1(14.5, 15, "papelito", papel_picado);
-    cotillon producto2(5.0, 30, "laLuz", fluorescentes);
-    cotillon producto3(2.3, 13, "espumin", espuma);
+    cotillon producto(10.0, 20, "disfrazate", "mascara");
+    cotillon producto1(14.5, 15, "papelito", "papel_picado");
+    cotillon producto2(5.0, 30, "laLuz", "fluorescentes");
+    cotillon producto3(2.3, 13, "espumin", "espuma");
     disfraces producto4(30.0, 3, "disfrazate");
     globos producto5("amarillo", 20, 1.0, "chico", "bombucha");
     golosinas producto6("fellfort", 1.0, 50);
