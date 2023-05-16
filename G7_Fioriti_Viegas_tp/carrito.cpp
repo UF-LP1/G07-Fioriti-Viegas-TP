@@ -27,6 +27,7 @@ void carrito::set_productos(forward_list<articulos> productos)
     this->productos;
 }
 
+<<<<<<< HEAD
 void carrito::set_producto(articulos productos)
 {
 }
@@ -36,6 +37,8 @@ void carrito::set_productos(articulos productos)
     this->productos.assign(1, productos);
 }
 
+=======
+>>>>>>> 215c0f292602bf673ce52840c4ce21bca95f9d5e
 void carrito::set_cant(unsigned int cant_productos)
 {
     this->cant_productos;

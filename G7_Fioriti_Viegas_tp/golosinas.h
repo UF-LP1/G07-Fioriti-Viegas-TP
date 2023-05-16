@@ -6,7 +6,11 @@
 class golosinas : public articulos {
 public:
 
+<<<<<<< HEAD
     golosinas(string marca, float precio, unsigned int stock);
+=======
+    golosinas(string marca, float precio, unsigned int stock,string nombre);
+>>>>>>> 215c0f292602bf673ce52840c4ce21bca95f9d5e
 
     ~golosinas();
 };

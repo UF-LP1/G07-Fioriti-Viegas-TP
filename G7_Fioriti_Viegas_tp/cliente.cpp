@@ -43,6 +43,7 @@ void cliente::reservar_disfraz() {//preguntar
 * @param marca Es la marca del producto que se desea
 * @param cant Es la cantidad de productos que se desean
 */
+<<<<<<< HEAD
 void cliente::agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant)
 {
     auto it = find_if(lista.begin(), lista.end(), nombre); //busco el nombre del articulo
@@ -61,6 +62,27 @@ void cliente::agregar_carrito(forward_list<articulos> lista, string nombre, stri
         else {
             cout << "No hay suficiente stock. Stock disponible: " << it->get_stock() << endl;
         }
+=======
+void cliente::agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant, string talle)
+{
+    for (auto it = lista.begin(); it != lista.end(); it++) {
+        if (it->get_marca() == marca && it->get_stock() >= cant && it->get_nombre() == nombre) { //determino el resto de caracteristicas
+            if()
+            it->set_stock(it->get_stock() - cant);//cambio el stock de la lista
+            articulos aux = *it;//creo el auxiliar de articulos que va a sumarse al carrito
+            aux.set_stock(cant);//le seteo la cantidad que va a tener en carrito
+
+            this->miCarrito.set_monto((it->get_precio() * cant) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
+            this->miCarrito.set_cant(this->miCarrito.get_cant() + cant);//cambio la cantidad de productos de carrito
+            this->miCarrito.get_productos().push_front(aux);//agrego el nuevo producto a carrito
+
+            cout << "Se agregaron " << cant << " productos al carrito por un precio total de $" << it->get_precio() * cant << endl;
+        }
+        else {
+            cout << "No hay suficiente stock. Stock disponible: " << it->get_stock() << endl;
+        }
+    }
+>>>>>>> 215c0f292602bf673ce52840c4ce21bca95f9d5e
 }
 
 

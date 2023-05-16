@@ -9,6 +9,7 @@
 class reposteria : public articulos {
 public:
 
+<<<<<<< HEAD
     reposteria(float precio, unsigned int stock, string marca);
 
     molde get_molde();
@@ -18,6 +19,9 @@ public:
     void set_molde(molde molde);
 
     void set_repostera(decoracion_repostera repostera);
+=======
+    reposteria(float precio, unsigned int stock, string marca,string nombre);
+>>>>>>> 215c0f292602bf673ce52840c4ce21bca95f9d5e
 
     ~reposteria();
 

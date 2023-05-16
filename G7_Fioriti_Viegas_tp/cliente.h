@@ -7,6 +7,10 @@
 #include "carrito.h"
 #include "medio_de_pago.h"
 #include "establecimiento.h"
+<<<<<<< HEAD
+=======
+#include "talles.h"
+>>>>>>> 215c0f292602bf673ce52840c4ce21bca95f9d5e
 
 
 class cliente : public persona {
@@ -22,8 +26,12 @@ public:
 
     void reservar_disfraz();
 
+<<<<<<< HEAD
 
     void agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant);
+=======
+    void agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant, string talle);
+>>>>>>> 215c0f292602bf673ce52840c4ce21bca95f9d5e
 
     void set_medio_pago(medio_de_pago medio_pago);
 
