@@ -1,6 +1,6 @@
 
-#ifndef _CUMPLEAÑOS_H
-#define _CUMPLEAÑOS_H
+#ifndef _CUMPLEANIOS_H
+#define _CUMPLEANIOS_H
 
 #include "articulos.h"
 

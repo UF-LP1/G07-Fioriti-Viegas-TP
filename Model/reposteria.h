@@ -14,8 +14,9 @@ public:
     ~reposteria();
 
 private:
+    /*
     molde tipo_molde;
-    decoracion_repostera tipo_decorado;
+    decoracion_repostera tipo_decorado;*/
 };
 
 #endif //_REPOSTERIA_H

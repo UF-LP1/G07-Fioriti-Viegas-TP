@@ -6,7 +6,9 @@
 class articulos {
 public:
 
-    articulos(string marca,string nombre);
+    articulos(string marca,string nombre,float precio, unsigned int stock);
+
+    articulos(string marca, string nombre);
 
     articulos();
 
@@ -27,7 +29,7 @@ public:
 protected:
     float precio;
     unsigned int stock;
-    const string marca;
-    const string nombre;
+     string marca;
+     string nombre;
 };
 #endif //_ARTICULOS_H

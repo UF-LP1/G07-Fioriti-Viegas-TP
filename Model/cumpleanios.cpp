@@ -1,8 +1,6 @@
 #include "cumpleanios.h"
 
 cumpleanios::cumpleanios(string color, string tamanio, float precio, unsigned int stock, string marca,string nombre) :articulos(marca,nombre) {
-    set_precio(precio);
-    set_stock(stock);
     this->precio = precio;
     this->stock = stock;
 }

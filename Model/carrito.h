@@ -21,7 +21,7 @@ public:
 
     float get_monto();
 
-    forward_list<articulos> get_productos();
+    forward_list<articulos> *get_productos();
 
     unsigned int get_cant();
 private:

@@ -8,7 +8,7 @@
 class disfraces : public articulos {
 public:
 
-    disfraces(float precio, unsigned int stock, string marca,string nombre,string talle);
+    disfraces(float precio, unsigned int stock, string marca,string nombre,talles talle);
 
     string get_talles();
 

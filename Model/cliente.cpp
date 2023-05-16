@@ -3,8 +3,8 @@
 cliente::cliente(string nombre, string apellido, string dni, string mail, string JPG) : persona(nombre, apellido, dni), mail(mail), JPG(JPG) {
     this->miCarrito.set_cant(0);
     this->miCarrito.set_monto(0);
-    forward_list<articulos> productos;
-    this->miCarrito.set_productos(productos);
+    //forward_list<articulos> productos;
+    //this->miCarrito.set_productos(productos); No esta definido para forward list
     this->cant_dinero = 0;
     this->disfraz = false;
     this->dias_alquilando = 0;
@@ -45,8 +45,10 @@ void cliente::reservar_disfraz() {//preguntar
 */
 void cliente::agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant)
 {
-    for (auto it = lista.begin(); it != lista.end(); it++) {
-        if (it->get_marca() == marca && it->get_stock() >= cant && it->get_nombre() == nombre) { //determino el resto de caracteristicas
+    for (forward_list<articulos>::iterator it = lista.begin(); it != lista.end(); it++)
+    {
+        if (it->get_marca() == marca && it->get_stock() >= cant && it->get_nombre() == nombre)
+        { //determino el resto de caracteristicas
 
             it->set_stock(it->get_stock() - cant);//cambio el stock de la lista
             articulos aux = *it;//creo el auxiliar de articulos que va a sumarse al carrito
@@ -54,15 +56,16 @@ void cliente::agregar_carrito(forward_list<articulos> lista, string nombre, stri
 
             this->miCarrito.set_monto((it->get_precio() * cant) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
             this->miCarrito.set_cant(this->miCarrito.get_cant() + cant);//cambio la cantidad de productos de carrito
-            this->miCarrito.get_productos().push_front(aux);//agrego el nuevo producto a carrito
+            std::forward_list<articulos>* aux2 = this->miCarrito.get_productos();
+            aux2->push_front(aux);//agrego el nuevo producto a carrito
 
             cout << "Se agregaron " << cant << " productos al carrito por un precio total de $" << it->get_precio() * cant << endl;
-        }
-        else {
-            cout << "No hay suficiente stock. Stock disponible: " << it->get_stock() << endl;
+            return;
         }
     }
-}
+    cout << "No hay suficiente stock." << endl;
+
+ }
 
 
 void cliente::set_medio_pago(medio_de_pago medio_pago) {

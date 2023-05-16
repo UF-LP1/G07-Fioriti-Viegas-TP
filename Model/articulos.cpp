@@ -2,11 +2,18 @@
 #include "articulos.h"
 
 
-articulos::articulos(string marca,string nombre) :marca(marca),nombre(nombre) {
+articulos::articulos(string marca,string nombre,float precio, unsigned int stock) /* :marca(marca), nombre(nombre)*/ {
+    this->precio =precio;
+    this->stock =stock;
+    this->nombre = nombre;
+    this->marca = marca;
+}
+articulos::articulos(string marca, string nombre) {
     this->precio = 0.0;
     this->stock = 0;
+    this->marca = marca;
+    this->nombre = nombre;
 }
-
 articulos::articulos():marca(""),nombre("")
 {
     this->precio = 0.0;
@@ -38,7 +45,7 @@ void articulos::set_precio(float precio) {
 }
 
 void articulos::set_stock(unsigned int stock) {
-    cout << this->stock << " unidades" << endl;
+    this->stock;
     return;
 }
 
