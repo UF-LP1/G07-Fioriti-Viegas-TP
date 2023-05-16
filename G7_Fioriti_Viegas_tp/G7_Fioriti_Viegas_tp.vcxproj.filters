@@ -100,9 +100,6 @@
     <ClInclude Include="..\Model\encargado.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\Model\Enumeration1.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="..\Model\establecimiento.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
