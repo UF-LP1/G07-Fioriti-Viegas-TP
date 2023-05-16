@@ -3,16 +3,16 @@
 #include <iostream>
 #include <forward_list>
 #include <string>
-#include "cotillon.h"
-#include "cliente.h"
-#include "disfraces.h"
-#include "globos.h"
-#include "golosinas.h"
-#include "manteles.h"
-#include "molde.h"
-#include "reposteria.h"
-#include "vajilla_descartable.h"
-#include "vela.h"
+#include "../Model/cotillon.h"
+#include "../Model/cliente.h"
+#include "../Model/disfraces.h"
+#include "../Model/globos.h"
+#include "../Model/golosinas.h"
+#include "../Model/manteles.h"
+#include "../Model/molde.h"
+#include "../Model/reposteria.h"
+#include "../Model/vajilla_descartable.h"
+#include "../Model/vela.h"
 
 using namespace std;
 
