@@ -1,16 +1,16 @@
 #include <iostream>
 #include <forward_list>
 #include <string>
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/cotillon.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/cliente.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/disfraces.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/globos.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/golosinas.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/manteles.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/molde.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/reposteria.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/vajilla_descartable.h"
-#include "/Users/ffior/source/repos/G7_Fioriti_Viegas_tp/G7_Fioriti_Viegas_tp/Model/vela.h"
+#include "G7_Fioriti_Viegas_tp/Model/articulos.cpp"
+#include "Model/cliente.h"
+#include "Model/disfraces.h"
+#include "Model/globos.h"
+#include "Model/golosinas.h"
+#include "Model/manteles.h"
+#include "Model/molde.h"
+#include "Model/reposteria.h"
+#include "Model/vajilla_descartable.h"
+#include "Model/vela.h"
 
 using namespace std;
 
