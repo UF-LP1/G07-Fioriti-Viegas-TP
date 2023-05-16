@@ -9,87 +9,147 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{1e8415d5-a356-4116-b9de-66976b18b07e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Model\articulos.cpp">
+    <ClCompile Include="..\Model\articulos.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\carrito.cpp">
+    <ClCompile Include="..\Model\carrito.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\cliente.cpp">
+    <ClCompile Include="..\Model\cliente.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\cotillon.cpp">
+    <ClCompile Include="..\Model\cotillon.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\cumpleanios.cpp">
+    <ClCompile Include="..\Model\cumpleanios.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\disfraces.cpp">
+    <ClCompile Include="..\Model\disfraces.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\empleado.cpp">
+    <ClCompile Include="..\Model\empleado.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\encargado.cpp">
+    <ClCompile Include="..\Model\encargado.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\establecimiento.cpp">
+    <ClCompile Include="..\Model\establecimiento.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\globos.cpp">
+    <ClCompile Include="..\Model\globos.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\golosinas.cpp">
+    <ClCompile Include="..\Model\golosinas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\manteles.cpp">
+    <ClCompile Include="..\Model\manteles.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\persona.cpp">
+    <ClCompile Include="..\Model\persona.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\reposteria.cpp">
+    <ClCompile Include="..\Model\reposteria.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\trabajador.cpp">
+    <ClCompile Include="..\Model\trabajador.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\vajilla_descartable.cpp">
+    <ClCompile Include="..\Model\vajilla_descartable.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Model\vela.cpp">
+    <ClCompile Include="..\Model\vela.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Model\articulos.h" />
-    <ClInclude Include="..\..\Model\articulos_cotillon.h" />
-    <ClInclude Include="..\..\Model\carrito.h" />
-    <ClInclude Include="..\..\Model\cliente.h" />
-    <ClInclude Include="..\..\Model\cotillon.h" />
-    <ClInclude Include="..\..\Model\cumpleanios.h" />
-    <ClInclude Include="..\..\Model\decoracion_repostera.h" />
-    <ClInclude Include="..\..\Model\disfraces.h" />
-    <ClInclude Include="..\..\Model\empleado.h" />
-    <ClInclude Include="..\..\Model\encargado.h" />
-    <ClInclude Include="..\..\Model\Enumeration1.h" />
-    <ClInclude Include="..\..\Model\establecimiento.h" />
-    <ClInclude Include="..\..\Model\globos.h" />
-    <ClInclude Include="..\..\Model\golosinas.h" />
-    <ClInclude Include="..\..\Model\librerias.h" />
-    <ClInclude Include="..\..\Model\mantel.h" />
-    <ClInclude Include="..\..\Model\manteles.h" />
-    <ClInclude Include="..\..\Model\matel.h" />
-    <ClInclude Include="..\..\Model\medio_de_pago.h" />
-    <ClInclude Include="..\..\Model\molde.h" />
-    <ClInclude Include="..\..\Model\persona.h" />
-    <ClInclude Include="..\..\Model\reposteria.h" />
-    <ClInclude Include="..\..\Model\talles.h" />
-    <ClInclude Include="..\..\Model\trabajador.h" />
-    <ClInclude Include="..\..\Model\vajilla.h" />
-    <ClInclude Include="..\..\Model\vajilla_descartable.h" />
-    <ClInclude Include="..\..\Model\vela.h" />
+    <ClInclude Include="..\Model\articulos.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\articulos_cotillon.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\carrito.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\cliente.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\cotillon.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\cumpleanios.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\decoracion_repostera.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\disfraces.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\empleado.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\encargado.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\Enumeration1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\establecimiento.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\globos.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\golosinas.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\librerias.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\mantel.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\manteles.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\matel.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\medio_de_pago.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\molde.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\persona.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\reposteria.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\talles.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\trabajador.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\vajilla.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\vajilla_descartable.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Model\vela.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
