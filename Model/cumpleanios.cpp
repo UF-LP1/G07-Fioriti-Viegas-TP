@@ -9,6 +9,7 @@ cumpleanios::~cumpleanios() {
 
 }
 
+
 string cumpleanios::get_color() {
     return this->color;
 }

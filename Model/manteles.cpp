@@ -4,17 +4,20 @@ manteles::manteles(float precio, unsigned int stock, string color, string tamani
 {
 
 }
-/*
-mantel manteles::get_decoracion()
+
+void manteles::set_codigo()
 {
-    return this->tipo_decoracion;
+    srand(time(NULL));
+    int aux = 401 + rand() % 500;
+    string codigo = to_string(aux);
+    this->codigo = codigo;
 }
 
-void manteles::set_decoracion(mantel decoracion)
+string manteles::get_codigo()
 {
-    this->tipo_decoracion = decoracion;
+    return this->codigo;
 }
-*/
+
 manteles::~manteles()
 {
 }

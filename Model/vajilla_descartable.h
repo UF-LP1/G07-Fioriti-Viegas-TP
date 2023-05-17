@@ -10,6 +10,10 @@ public:
 
     vajilla_descartable(float precio, unsigned int stock, string tamanio, string color, string marca,string nombre);
 
+    void set_codigo();
+
+    string get_codigo();
+
     ~vajilla_descartable();
 private:/*
     vajilla producto;*/

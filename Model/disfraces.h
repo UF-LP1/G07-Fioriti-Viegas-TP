@@ -10,6 +10,10 @@ public:
 
     disfraces(float precio, unsigned int stock, string marca,string nombre,talles talle);
 
+    void set_codigo();
+
+    string get_codigo();
+
     string get_talles();
 
     void set_talle(string talle);

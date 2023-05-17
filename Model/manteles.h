@@ -8,6 +8,10 @@ public:
 
     manteles(float precio, unsigned int stock, string color, string tamanio, string marca,string nombre);
 
+    void set_codigo();
+
+    string get_codigo();
+
     ~manteles();
 
 };

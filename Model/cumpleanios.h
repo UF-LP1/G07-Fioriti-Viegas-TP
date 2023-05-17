@@ -12,6 +12,8 @@ public:
 
     ~cumpleanios();
 
+    virtual void set_codigo() = 0;
+
     string get_color();
 
     string get_tamanio();

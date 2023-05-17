@@ -9,6 +9,8 @@
 #include "establecimiento.h"
 #include "talles.h"
 #include "disfraces.h"
+#include "empleado.h"
+#include "cumpleanios.h"
 
 
 class cliente : public persona {
@@ -24,7 +26,7 @@ public:
 
     void reservar_disfraz();
 
-    void agregar_carrito(forward_list<articulos> lista);
+    void agregar_carrito(forward_list<articulos> lista, empleado trabajador);
 
     void set_medio_pago(medio_de_pago medio_pago);
 

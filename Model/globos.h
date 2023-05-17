@@ -10,6 +10,10 @@ public:
 
     globos(string color, unsigned int stock, float precio, string tamanio, string  marca,string nombre);
 
+    void set_codigo();
+
+    string get_codigo();
+
     ~globos();
 };
 

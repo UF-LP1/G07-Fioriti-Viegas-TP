@@ -12,6 +12,8 @@ public:
 
     articulos();
 
+    virtual void set_codigo() {};
+
     float get_precio();
 
     string get_nombre();
@@ -31,5 +33,6 @@ protected:
     unsigned int stock;
      string marca;
      string nombre;
+     string codigo;
 };
 #endif //_ARTICULOS_H

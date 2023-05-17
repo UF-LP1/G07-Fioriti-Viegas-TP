@@ -17,6 +17,7 @@
 #include "../Model/empleado.h"
 #include "../Model/establecimiento.h"
 
+
 using namespace std;
 
 int main()  {
@@ -52,17 +53,15 @@ int main()  {
     string condicion;
     bool ganas = true;
     while (ganas) {
-        buta.agregar_carrito(lista);
+        buta.agregar_carrito(lista,martin);
         system("cls");
         cout << "*Pensamiento interior de " << buta.get_nombre() << "*" << endl;
-        cout << "¿Tengo ganas de algo mas?" << endl;
+        cout << "Tengo ganas de algo mas?" << endl;
         cin >> condicion;
         if (condicion == "no" || condicion == "No" || condicion == "NO")
             ganas = false;
     }
-
-    encargado mariano("mariano", "bordeira", "446635760", 50);
-    empleado martin("martin", "scorza", "467936533", 0.0);
-
+    system("cls");
+    martin.terminar_interaccion();
     return 0;
 }

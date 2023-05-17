@@ -11,7 +11,9 @@ public:
 
     void llamar_cliente(unsigned int numero_orden);
 
-    void atender_mostrador();
+    void atender_mostrador(string **nombre, string **marca, unsigned int **cant);
+
+    void terminar_interaccion();
 
     ~empleado();
 };

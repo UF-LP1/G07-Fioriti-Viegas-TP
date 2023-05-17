@@ -11,6 +11,10 @@ public:
 
     reposteria(float precio, unsigned int stock, string marca,string nombre);
 
+    void set_codigo();
+
+    string get_codigo();
+
     ~reposteria();
 
 private:

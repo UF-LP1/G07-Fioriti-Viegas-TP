@@ -14,7 +14,7 @@ public:
 
     void set_monto(float monto);
 
-    void set_productos(forward_list<articulos> productos);
+    //void set_productos(forward_list<articulos> productos);
 
 
     void set_cant(unsigned int cant_productos);

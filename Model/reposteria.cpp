@@ -12,6 +12,19 @@ reposteria::reposteria(float precio, unsigned int stock, string marca,string nom
     /*this->tipo_decorado = ninguna;
     this->tipo_molde = ninguno;*/
 }
+
+void reposteria::set_codigo()
+{
+    srand(time(NULL));
+    int aux = 501 + rand() % 600;
+    string codigo = to_string(aux);
+    this->codigo = codigo;
+}
+
+string reposteria::get_codigo()
+{
+    return this->codigo;
+}
 /*
 molde reposteria::get_molde()
 {
