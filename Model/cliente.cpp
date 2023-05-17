@@ -54,6 +54,7 @@ void cliente::agregar_carrito(forward_list<articulos> lista, empleado trabajador
     {
         if (it->get_marca() == *marcaBuscada && it->get_nombre() == *nombreBuscado)
         {
+            if()
             if (it->get_stock() >= *cantidadBuscada)
             { //determino el resto de caracteristicas
 
