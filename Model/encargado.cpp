@@ -1,7 +1,7 @@
 #include "encargado.h"
 
 encargado::encargado(string nombre, string apellido, string dni, float sueldo) :trabajador(nombre, apellido, dni) {
-    set_sueldo(sueldo);
+    this->sueldo = sueldo;
 }
 
 float encargado::cobrar(carrito producto) {

@@ -13,7 +13,7 @@ cliente::cliente(string nombre, string apellido, string dni, string mail, string
 }
 
 float cliente::pagar(float precio) { //cosultar la relacion entre encargado y cliente, metodos de pagar y cobrar
-    float aux;
+    float aux = 0.0;
     if (this->miCarrito.get_monto() < this->cant_dinero)
         aux = this->cant_dinero - this->miCarrito.get_monto();
     else

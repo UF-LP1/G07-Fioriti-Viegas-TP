@@ -7,8 +7,8 @@ reposteria::~reposteria() {
 
 reposteria::reposteria(float precio, unsigned int stock, string marca,string nombre) :articulos(marca,nombre)
 {
-    set_precio(precio);
-    set_stock(stock);
+    this->precio = precio;
+    this->stock = stock;
     /*this->tipo_decorado = ninguna;
     this->tipo_molde = ninguno;*/
 }

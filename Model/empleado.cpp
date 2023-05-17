@@ -1,7 +1,7 @@
 #include "empleado.h"
 
 empleado::empleado(string nombre, string apellido, string dni, float sueldo) : trabajador(nombre, apellido, dni) {
-    set_sueldo(sueldo);
+    this->sueldo = sueldo;
 }
 
 void empleado::llamar_cliente(unsigned int numero_orden)
