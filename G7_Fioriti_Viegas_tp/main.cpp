@@ -15,11 +15,12 @@
 #include "../Model/vela.h"
 #include "../Model/encargado.h"
 #include "../Model/empleado.h"
+#include "../Model/establecimiento.h"
 
 using namespace std;
 
 int main()  {
-    
+    establecimiento lugar("Don Manolo", "Av. Cabildo 3093", "De lunes a viernes de 9:00 AM a 17:00 PM", "Sabados de 8:00 AM a 14:00 PM", "54 9 236 434-6284");
     cotillon producto(10.0, 20, "disfrazate", "mascara");
     cotillon producto1(14.5, 15, "papelito", "papel_picado");
     cotillon producto2(5.0, 30, "laLuz", "fluorescentes");
@@ -43,22 +44,22 @@ int main()  {
     lista.push_front(producto8);
     lista.push_front(producto9);
     lista.push_front(producto10);
-    cliente pedro("Pedro", "Marquez", "45428877", "marquezbest@gmail.com", "imagen.jpg");
-    string nombreBuscado, marcaBuscada;
-    int cantidadBuscada;
-    string talle;
-
-    cout << "Ingrese el nombre del producto que desea buscar: " << endl;
-    getline(cin, nombreBuscado);
-    cout << "Ingrese la marca del producto que desea buscar: " << endl;
-    getline(cin, marcaBuscada);
-    cout << "Ingrese la cantidad de productos que desea: " << endl;
-    cin >> cantidadBuscada;
-    /*cout << "Ingrese talle de ser necesario. Caso contrario, ingrese 0" << endl;
-    getline(cin, talle);*/
-
-    // Buscamos el producto deseado en la lista de productos
-    pedro.agregar_carrito(lista, nombreBuscado, marcaBuscada, cantidadBuscada);
+    cliente buta("Bautista", "Rach", "457893394", "butaneta10@gmail.com", "imagen.jpg");
+    empleado martin("Martin", "Scorza", "46738264", 0.0);
+    encargado fede("Federico Pascual", "Fioriti", "45428877", 100.0);
+    buta.agarrar_numero();
+    martin.llamar_cliente(buta.get_numero_orden());
+    string condicion;
+    bool ganas = true;
+    while (ganas) {
+        buta.agregar_carrito(lista);
+        system("cls");
+        cout << "*Pensamiento interior de " << buta.get_nombre() << "*" << endl;
+        cout << "¿Tengo ganas de algo mas?" << endl;
+        cin >> condicion;
+        if (condicion == "no" || condicion == "No" || condicion == "NO")
+            ganas = false;
+    }
 
     encargado mariano("mariano", "bordeira", "446635760", 50);
     empleado martin("martin", "scorza", "467936533", 0.0);

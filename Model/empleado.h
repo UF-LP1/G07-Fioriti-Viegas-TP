@@ -4,7 +4,6 @@
 
 #include "trabajador.h"
 
-
 class empleado : public trabajador {
 public:
 

@@ -20,11 +20,11 @@ public:
 
     void solicitar_impresion();
 
-    void agarrar_numero(unsigned int numero);
+    void agarrar_numero();
 
     void reservar_disfraz();
 
-    void agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant);
+    void agregar_carrito(forward_list<articulos> lista);
 
     void set_medio_pago(medio_de_pago medio_pago);
 

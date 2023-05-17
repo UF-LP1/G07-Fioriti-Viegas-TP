@@ -6,10 +6,11 @@ empleado::empleado(string nombre, string apellido, string dni, float sueldo) : t
 
 void empleado::llamar_cliente(unsigned int numero_orden)
 {
-    cout << "cliente: " << numero_orden << endl;
+    cout << "*Empleado* Cliente: " << numero_orden << endl;
 }
 
 void empleado::atender_mostrador() {
+
     return;
 }
 

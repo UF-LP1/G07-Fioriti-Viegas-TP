@@ -25,8 +25,9 @@ void cliente::solicitar_impresion() {
     return;
 }
 
-void cliente::agarrar_numero(unsigned int numero) {
-    this->numero_orden = numero;
+void cliente::agarrar_numero() {
+    srand(time(NULL));
+    this->numero_orden = 1+rand();
     return;
 }
 
@@ -43,27 +44,38 @@ void cliente::reservar_disfraz() {//preguntar
 * @param marca Es la marca del producto que se desea
 * @param cant Es la cantidad de productos que se desean
 */
-void cliente::agregar_carrito(forward_list<articulos> lista, string nombre, string marca, unsigned int cant)
+void cliente::agregar_carrito(forward_list<articulos> lista)
 {
+    string nombreBuscado, marcaBuscada;
+    unsigned int cantidadBuscada;
+    cout << "*empelado* Ingrese el nombre del producto que desea buscar: " << endl;
+    getline(cin, nombreBuscado);
+    cout << "*empleado* Ingrese la marca del producto que desea buscar: " << endl;
+    getline(cin, marcaBuscada);
+    cout << "*empleado* Ingrese la cantidad de productos que desea: " << endl;
+    cin >> cantidadBuscada;
     for (forward_list<articulos>::iterator it = lista.begin(); it != lista.end(); it++)
     {
-        if (it->get_marca() == marca && it->get_stock() >= cant && it->get_nombre() == nombre)
+        if(it->get_marca() == nombreBuscado && it->get_nombre() == nombre)
+        if (it->get_stock() >= cantidadBuscada)
         { //determino el resto de caracteristicas
 
-            it->set_stock(it->get_stock() - cant);//cambio el stock de la lista
+            it->set_stock(it->get_stock() - cantidadBuscada);//cambio el stock de la lista
             articulos aux = *it;//creo el auxiliar de articulos que va a sumarse al carrito
-            aux.set_stock(cant);//le seteo la cantidad que va a tener en carrito
+            aux.set_stock(cantidadBuscada);//le seteo la cantidad que va a tener en carrito
 
-            this->miCarrito.set_monto((it->get_precio() * cant) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
-            this->miCarrito.set_cant(this->miCarrito.get_cant() + cant);//cambio la cantidad de productos de carrito
+            this->miCarrito.set_monto((it->get_precio() * cantidadBuscada) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
+            this->miCarrito.set_cant(this->miCarrito.get_cant() + cantidadBuscada);//cambio la cantidad de productos de carrito
             std::forward_list<articulos>* aux2 = this->miCarrito.get_productos();
             aux2->push_front(aux);//agrego el nuevo producto a carrito
 
-            cout << "Se agregaron " << cant << " productos al carrito por un precio total de $" << it->get_precio() * cant << endl;
+            cout << "Se agregaron " << cantidadBuscada << " productos al carrito por un precio total de $" << it->get_precio() * cantidadBuscada << endl;
             return;
         }
+        else
+            cout << "*empleado* Solo tenemos " << it->get_stock() << " de los " << cantidadBuscada << " que usted pidio."
     }
-    cout << "No hay suficiente stock." << endl;
+    cout << "*empleado* No tenemos ese producto en venta en este momento." << endl;
 
  }
 
