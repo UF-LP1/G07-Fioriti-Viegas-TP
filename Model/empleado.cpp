@@ -25,6 +25,25 @@ void empleado::atender_mostrador(string **nombre, string **marca, unsigned int *
     return;
 }
 
+void empleado::paraCumpleanios(string **tamanio, string **color)
+{
+    string tamanioaux, coloraux;
+    cout << "*empleado* Que tamanio desea llevar?(nombre) " << endl;
+    getline(cin, tamanioaux);
+    *tamanio = &tamanioaux;
+    cout << "*empleado* De que color quiere el producto? " << endl;
+    getline(cin, coloraux);
+    *color = &coloraux;
+    return;
+}
+
+void empleado::paraDisfraz(string** talle) {
+    string talleaux;
+    cout << "*empleado* Que talle queria?" << endl;
+    getline(cin, talleaux);
+    *talle = &talleaux;
+}
+
 void empleado::terminar_interaccion()
 {
     cout << "Por favor, dirigase a la caja a que le cobren los productos. Adios!" << endl;

@@ -13,6 +13,10 @@ public:
 
     void atender_mostrador(string **nombre, string **marca, unsigned int **cant);
 
+    void paraCumpleanios(string **tamanio, string **color);
+
+    void paraDisfraz(string** talle);
+
     void terminar_interaccion();
 
     ~empleado();
