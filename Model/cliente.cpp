@@ -45,9 +45,9 @@ void cliente::reservar_disfraz() {//preguntar
 void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajador)
 {
     //declaro las variables auxiliares principales para comparar
-    string* nombreBuscado = nullptr;
-    string* marcaBuscada = nullptr;
-    unsigned int *cantidadBuscada = nullptr;
+    string* nombreBuscado = new string;
+    string* marcaBuscada = new string;
+    unsigned int *cantidadBuscada = new unsigned int;
     trabajador.atender_mostrador(&nombreBuscado, &marcaBuscada, &cantidadBuscada);//paso los punteros para devolver lo que el cliente busca
     for (forward_list<articulos>::iterator it = (*lista).begin(); it != (*lista).end(); it++)//recorro la lista con el iterador
     {
@@ -55,9 +55,9 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
         {
             articulos aux = *it;//paso el contenido del iterador a un auxiliar
             cumpleanios* cumple = dynamic_cast<cumpleanios*>(&aux);//me fijo si es de tipo cumpleanios
-            if (&cumple != nullptr) {//si lo es, entra a la condicion
-                    string* tamanioBuscado = nullptr;
-                    string* colorBuscado = nullptr;
+            if (cumple != NULL) {//si no lo es, entra a la condicion
+                    string* tamanioBuscado = new string;
+                    string* colorBuscado = new string;
                     trabajador.paraCumpleanios(&tamanioBuscado, &colorBuscado);//mismo que en atender_mostrador
                     if (cumple->get_color() != *colorBuscado || cumple->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
                         std::cout << "No tenemos ese producto en especifico." << endl;
@@ -68,7 +68,7 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
             //repito el proceso de cumpleanios en disfraces
             disfraces* disfraz = dynamic_cast<disfraces*>(&aux);
             if(disfraz != nullptr){
-                string* talleBuscado = nullptr;
+                string* talleBuscado = new string;
                 trabajador.paraDisfraz(&talleBuscado);
                 if (disfraz->get_talles() != *talleBuscado)
                     cout << "No tenemos ese difraz en concreto." << endl;

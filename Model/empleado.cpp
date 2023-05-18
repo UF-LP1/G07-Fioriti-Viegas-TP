@@ -15,13 +15,13 @@ void empleado::atender_mostrador(string **nombre, string **marca, unsigned int *
     cout << "*empleado* Que producto desea llevar?(nombre): " << endl;
     getchar();
     getline(cin, nombreaux);
-    *nombre = &nombreaux;
+    **nombre = *&nombreaux;
     cout << "*empleado* Que marca es la del producto?: " << endl;
     getline(cin, marcaaux);
-    *marca = &marcaaux;
+    **marca = *&marcaaux;
     cout << "*empleado* Cuantos necesitas?: " << endl;
     cin >> cantaux;
-    *cant = &cantaux;
+    **cant = *&cantaux;
     return;
 }
 
