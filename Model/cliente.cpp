@@ -85,7 +85,7 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
                 forward_list<articulos>* aux2 = this->miCarrito.get_productos();
                 aux2->push_front(aux);//agrego el nuevo producto a carrito
 
-                cout << "Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << it->get_precio() * *cantidadBuscada << endl;
+                cout << "*empleado* Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << it->get_precio() * *cantidadBuscada << endl;
                 delete nombreBuscado;
                 delete marcaBuscada;
                 delete cantidadBuscada;
