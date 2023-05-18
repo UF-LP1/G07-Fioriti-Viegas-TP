@@ -12,14 +12,15 @@ cliente::cliente(string nombre, string apellido, string dni, string mail, string
     this->numero_orden = 0;
 }
 
-float cliente::pagar(float precio, encargado encargado) { //cosultar la relacion entre encargado y cliente, metodos de pagar y cobrar
-    float aux = this->cant_dinero;
+void cliente::pagar(float precio, encargado encargado) { //cosultar la relacion entre encargado y cliente, metodos de pagar y cobra
+    if (this->miCarrito.get_monto() < this->cant_dinero) {
+        this->cant_dinero = this->cant_dinero - this->miCarrito.get_monto();
 
-    if (this->miCarrito.get_monto() < this->cant_dinero)
-        aux = this->cant_dinero - this->miCarrito.get_monto();
-    else
-        cout << "No tiene saldo suficiente." << endl;
-    return aux;
+    }
+        else {
+            cout << "*encargado* No tiene saldo suficiente." << endl;
+        }
+    return;
 }
 
 void cliente::solicitar_impresion() {

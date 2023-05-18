@@ -19,7 +19,7 @@ public:
 
     cliente(string nombre, string apellido, string dni, string mail, string JPG);
 
-    float pagar(float precio, encargado encargado);
+    void pagar(float precio, encargado encargado);
 
     void solicitar_impresion();
 

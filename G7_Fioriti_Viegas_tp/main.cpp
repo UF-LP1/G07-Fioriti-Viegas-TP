@@ -1,8 +1,4 @@
 
-//
-//#include <iostream>
-//#include <forward_list>
-//#include <string>
 #include "../Model/cotillon.h"
 #include "../Model/cliente.h"
 #include "../Model/disfraces.h"
