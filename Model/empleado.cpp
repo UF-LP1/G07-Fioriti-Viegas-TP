@@ -6,7 +6,7 @@ empleado::empleado(string nombre, string apellido, string dni, float sueldo) : t
 
 void empleado::llamar_cliente(unsigned int numero_orden)
 {
-    cout << "*Empleado* Cliente: " << numero_orden << endl;
+    cout << "*empleado* Cliente: " << numero_orden << endl;
 }
 
 void empleado::atender_mostrador(string **nombre, string **marca, unsigned int **cant) {
@@ -30,10 +30,10 @@ void empleado::paraCumpleanios(string **tamanio, string **color)
     string tamanioaux, coloraux;
     cout << "*empleado* Que tamanio desea llevar?(nombre) " << endl;
     getline(cin, tamanioaux);
-    *tamanio = &tamanioaux;
+    **tamanio = *&tamanioaux;
     cout << "*empleado* De que color quiere el producto? " << endl;
     getline(cin, coloraux);
-    *color = &coloraux;
+    **color = *&coloraux;
     return;
 }
 
@@ -41,12 +41,12 @@ void empleado::paraDisfraz(string** talle) {
     string talleaux;
     cout << "*empleado* Que talle queria?" << endl;
     getline(cin, talleaux);
-    *talle = &talleaux;
+    **talle = *&talleaux;
 }
 
 void empleado::terminar_interaccion()
 {
-    cout << "Por favor, dirigase a la caja a que le cobren los productos. Adios!" << endl;
+    cout << "* empleado* Por favor, dirigase a la caja a que le cobren los productos. Adios!" << endl;
 }
 
 empleado::~empleado() {

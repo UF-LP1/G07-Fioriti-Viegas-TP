@@ -11,6 +11,7 @@
 #include "disfraces.h"
 #include "empleado.h"
 #include "cumpleanios.h"
+#include "encargado.h"
 
 
 class cliente : public persona {
@@ -18,7 +19,7 @@ public:
 
     cliente(string nombre, string apellido, string dni, string mail, string JPG);
 
-    float pagar(float precio);
+    float pagar(float precio, encargado encargado);
 
     void solicitar_impresion();
 

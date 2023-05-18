@@ -27,7 +27,7 @@ int main()  {
     cotillon producto2(5.0, 30, "laLuz", "fluorescentes");
     cotillon producto3(2.3, 13, "espumin", "espuma");
     disfraces producto4(30.0,3, "disfrazate", "disfraz de batman", XS );
-    globos producto5("amarillo", 20, 1.0, "chico", "bombucha", "globos");
+    globos producto5("amarillo", 20, 1.0, "chico", "bombucha", "globo");
     golosinas producto6("fellfort", 1.0, 50, "caramelo");
     manteles producto7(5.0, 5, "violeta", "10 m2", "mantelito", "mantel de cumpleaños");
     reposteria producto8(3.0,45,"moldeate","molde de torta");
@@ -63,5 +63,8 @@ int main()  {
     }
     system("cls");
     martin.terminar_interaccion();
+
+    fede.cobrar(buta.get_carrito()); 
+
     return 0;
 }
