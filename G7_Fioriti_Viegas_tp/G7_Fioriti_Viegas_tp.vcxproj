@@ -37,6 +37,7 @@
     <ClCompile Include="..\Model\vajilla_descartable.cpp" />
     <ClCompile Include="..\Model\vela.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Model\articulos.h" />
