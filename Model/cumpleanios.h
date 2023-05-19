@@ -12,7 +12,7 @@ public:
 
     ~cumpleanios();
 
-    void set_codigo() override;
+    void set_codigo();
 
     string get_color();
 

@@ -56,7 +56,7 @@ int main()  {
         cout << "Tengo ganas de algo mas?" << endl;
         cin >> condicion;
         if (condicion == "no" || condicion == "No" || condicion == "NO")
-            ganas = false;
+            ganas = false; system("cls");
     }
     system("cls");
     martin.terminar_interaccion();

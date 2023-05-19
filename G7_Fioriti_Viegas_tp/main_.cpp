@@ -1,4 +1,4 @@
-#include "../Model/cotillon.h"
+/*#include "../Model/cotillon.h"
 #include "../Model/cliente.h"
 #include "../Model/disfraces.h"
 #include "../Model/globos.h"
@@ -63,4 +63,4 @@ int main() {
     //fede.cobrar(buta.get_carrito()); 
 
     return 0;
-}
+}*/
