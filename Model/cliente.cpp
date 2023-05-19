@@ -56,23 +56,23 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
         if (it->get_marca() == *marcaBuscada && it->get_nombre() == *nombreBuscado)//condicion necesaria para ubicar el objeto
         {
             articulos aux = *it;//paso el contenido del iterador a un auxiliar
-            //cumpleanios* cumple = dynamic_cast<cumpleanios*>(aux);//me fijo si es de tipo cumpleanios
-            if (dynamic_cast<cumpleanios*>(&*it) != nullptr) {//si no lo es, entra a la condicion
+            cumpleanios* cumple = dynamic_cast<cumpleanios*>(&aux);//me fijo si es de tipo cumpleanios
+            if (/*dynamic_cast<cumpleanios*>(&*it)*/cumple != nullptr) {//si no lo es, entra a la condicion
                     string* tamanioBuscado = new string;
                     string* colorBuscado = new string;
                     trabajador.paraCumpleanios(&tamanioBuscado, &colorBuscado);//mismo que en atender_mostrador
-                    if (dynamic_cast<cumpleanios*>(&*it)->get_color() != *colorBuscado || dynamic_cast<cumpleanios*>(&*it)->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
+                    if (/*dynamic_cast<cumpleanios*>(&*it)*/cumple->get_color() != *colorBuscado || /*dynamic_cast<cumpleanios*>(&*it)*/cumple->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
                         std::cout << "No tenemos ese producto en especifico." << endl;
                     //deleteo los punteros ya que no me sirven mas
                     delete tamanioBuscado;
                     delete colorBuscado;
             }
             //repito el proceso de cumpleanios en disfraces
-            //disfraces* disfraz = dynamic_cast<disfraces*>(aux);
-            if(dynamic_cast<disfraces*>(&*it) != nullptr){
+            disfraces* disfraz = dynamic_cast<disfraces*>(&aux);
+            if(/*dynamic_cast<disfraces*>(&*it)*/disfraz != nullptr) {
                 string* talleBuscado = new string;
                 trabajador.paraDisfraz(&talleBuscado);
-                if (dynamic_cast<disfraces*>(&*it)->get_talles() != *talleBuscado)
+                if (/*dynamic_cast<disfraces*>(&*it)*/disfraz->get_talles() != *talleBuscado)
                     cout << "No tenemos ese difraz en concreto." << endl;
                 delete talleBuscado;
             }
