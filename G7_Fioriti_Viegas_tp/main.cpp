@@ -17,6 +17,7 @@
 using namespace std;
 
 int main()  {
+    srand(time(NULL));
     establecimiento lugar("Don Manolo", "Av. Cabildo 3093", "De lunes a viernes de 9:00 AM a 17:00 PM", "Sabados de 8:00 AM a 14:00 PM", "54 9 236 434-6284");
     cotillon producto(10.0, 20, "disfrazate", "mascara");
     cotillon producto1(14.5, 15, "papelito", "papel_picado");

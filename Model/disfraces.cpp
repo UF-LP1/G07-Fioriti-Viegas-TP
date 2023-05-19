@@ -9,7 +9,7 @@ disfraces::disfraces(float precio, unsigned int stock, string marca, string nomb
 
 void disfraces::set_codigo()
 {
-	srand(time(NULL));
+	
 	int aux = 101 + rand() % 200;
 	string codigo = to_string(aux);
 	this->codigo = codigo;

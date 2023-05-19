@@ -55,8 +55,8 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
     {
         if (it->get_marca() == *marcaBuscada && it->get_nombre() == *nombreBuscado)//condicion necesaria para ubicar el objeto
         {
-            articulos aux = *it;//paso el contenido del iterador a un auxiliar
-            cumpleanios* cumple = dynamic_cast<cumpleanios*>(&aux);//me fijo si es de tipo cumpleanios
+            articulos *aux = &(*it);//paso el contenido del iterador a un auxiliar
+            cumpleanios* cumple = dynamic_cast<cumpleanios*>(aux);//me fijo si es de tipo cumpleanios
             if (/*dynamic_cast<cumpleanios*>(&*it)*/cumple != nullptr) {//si no lo es, entra a la condicion
                     string* tamanioBuscado = new string;
                     string* colorBuscado = new string;
@@ -68,7 +68,7 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
                     delete colorBuscado;
             }
             //repito el proceso de cumpleanios en disfraces
-            disfraces* disfraz = dynamic_cast<disfraces*>(&aux);
+            disfraces* disfraz = dynamic_cast<disfraces*>(&(*it));
             if(/*dynamic_cast<disfraces*>(&*it)*/disfraz != nullptr) {
                 string* talleBuscado = new string;
                 trabajador.paraDisfraz(&talleBuscado);
@@ -85,7 +85,7 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
                 this->miCarrito.set_monto((it->get_precio() * *cantidadBuscada) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
                 this->miCarrito.set_cant(this->miCarrito.get_cant() + *cantidadBuscada);//cambio la cantidad de productos de carrito
                 forward_list<articulos>* aux2 = this->miCarrito.get_productos();
-                aux2->push_front((aux));//agrego el nuevo producto a carrito
+                aux2->push_front((*aux));//agrego el nuevo producto a carrito
 
                 cout << "*empleado* Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << it->get_precio() * *cantidadBuscada << endl;
                 delete nombreBuscado;

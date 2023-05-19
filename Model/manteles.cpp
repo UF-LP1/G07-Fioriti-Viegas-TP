@@ -7,7 +7,6 @@ manteles::manteles(float precio, unsigned int stock, string color, string tamani
 
 void manteles::set_codigo()
 {
-    srand(time(NULL));
     int aux = 401 + rand() % 500;
     string codigo = to_string(aux);
     this->codigo = codigo;

@@ -7,7 +7,7 @@ cotillon::cotillon(float precio, unsigned int stock, string marca,string nombre)
 
 void cotillon::set_codigo()
 {
-    srand(time(NULL));
+   
     int aux = 1 + rand() % 100;
     string codigo = to_string(aux);
     this->codigo = codigo;

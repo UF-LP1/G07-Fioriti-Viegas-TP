@@ -9,6 +9,10 @@ cumpleanios::~cumpleanios() {
 
 }
 
+void cumpleanios::set_codigo()
+{
+}
+
 
 string cumpleanios::get_color() {
     return this->color;
