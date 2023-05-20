@@ -1,4 +1,4 @@
-/*#ifndef _VAJILLA_DESCARTABLE_H
+#ifndef _VAJILLA_DESCARTABLE_H
 #define _VAJILLA_DESCARTABLE_H
 
 #include "cumpleanios.h"
@@ -16,8 +16,7 @@ public:
 
     ~vajilla_descartable();
 private:/*
-    vajilla producto;*//*
+    vajilla producto;*/
 };
 
 #endif //_VAJILLA_DESCARTABLE_H
-*/

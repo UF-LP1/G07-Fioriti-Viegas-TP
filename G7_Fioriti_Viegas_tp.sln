@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "G7_Fioriti_Viegas_tp", "G7_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{40B96D24-3478-4B56-82F6-78983BD480EA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{6EEDA381-84D2-48F3-8ECC-AC2090026082}"
+	ProjectSection(SolutionItems) = preProject
+		Model\Enumeration1.h = Model\Enumeration1.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

@@ -1,4 +1,4 @@
-/*#ifndef _VELA_H
+#ifndef _VELA_H
 #define _VELA_H
 
 #include "cumpleanios.h"
@@ -17,4 +17,4 @@ public:
 
 };
 
-#endif //_VELA_H*/
+#endif //_VELA_H

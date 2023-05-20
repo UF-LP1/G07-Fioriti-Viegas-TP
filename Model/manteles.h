@@ -1,4 +1,4 @@
-/*#ifndef _MANTELES_H
+#ifndef _MANTELES_H
 #define _MANTELES_H
 #include "matel.h"
 #include "cumpleanios.h"
@@ -16,4 +16,4 @@ public:
 
 };
 
-#endif //_MANTEL_DECORADO_H*/
+#endif //_MANTEL_DECORADO_H

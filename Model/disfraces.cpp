@@ -20,12 +20,12 @@ string disfraces::get_codigo()
 	return this->codigo;
 }
 
-string disfraces::get_talles()
+talles disfraces::get_talles()
 {
 	return this->talle;
 }
 
-void disfraces::set_talle(string talle) {
+void disfraces::set_talle(talles talle) {
 	this->talle = talle;
 }
 

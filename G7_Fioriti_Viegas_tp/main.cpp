@@ -23,13 +23,13 @@ int main()  {
     cotillon producto1(14.5, 15, "papelito", "papel_picado");
     cotillon producto2(5.0, 30, "laLuz", "fluorescentes");
     cotillon producto3(2.3, 13, "espumin", "espuma");
-    disfraces producto4(30.0,3, "disfrazate", "disfraz de batman", XS );
-    cumpleanios producto5("amarillo", "chico",1.0, 20, "bombucha", "globo");
+    disfraces producto4(30.0,3, "disfrazate", "disfraz de batman", XS);
+    globos producto5("amarillo", 20, 1.0, "chico", "bombucha", "globo");
     golosinas producto6("fellfort", 1.0, 50, "caramelo");
-    cumpleanios producto7("violeta", "grande",30.0, 40, "mantelito", "mantel de cumpleaños");
+    manteles producto7(5.0, 5, "violeta", "10 m2", "mantelito", "mantel de cumpleaños");
     reposteria producto8(3.0,45,"moldeate","molde de torta");
     reposteria producto9(5.0, 34, "moldeate", "chocolate");
-    cumpleanios producto10("rojo", "chiquito", 2.3, 20, "tusVajillas", "vaso");
+    vajilla_descartable producto10(6.5, 34, "chiquito", "rojo", "tusVajillas", "vaso");
     forward_list<articulos*> lista;
     lista.push_front(&producto);
     lista.push_front(&producto1);

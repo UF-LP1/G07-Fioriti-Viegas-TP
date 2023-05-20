@@ -15,7 +15,7 @@ public:
 
     void paraCumpleanios(string **tamanio, string **color);
 
-    void paraDisfraz(string** talle);
+    void paraDisfraz(int** talle);
 
     void terminar_interaccion();
 

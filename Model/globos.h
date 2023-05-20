@@ -1,4 +1,4 @@
-/*
+
 #ifndef _GLOBOS_H
 #define _GLOBOS_H
 
@@ -17,4 +17,4 @@ public:
     ~globos();
 };
 
-#endif //_GLOBOS_H*/
+#endif //_GLOBOS_H

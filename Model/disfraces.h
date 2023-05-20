@@ -14,13 +14,13 @@ public:
 
     string get_codigo();
 
-    string get_talles();
+    talles get_talles();
 
-    void set_talle(string talle);
+    void set_talle(talles talle);
 
     ~disfraces();
 private:
-    string talle;
+    talles talle;
 };
 
 #endif //_DISFRACES_H

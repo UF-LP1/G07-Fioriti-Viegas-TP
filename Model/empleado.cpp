@@ -13,11 +13,10 @@ void empleado::atender_mostrador(string **nombre, string **marca, unsigned int *
     string nombreaux, marcaaux;
     unsigned int cantaux;
     cout << "*empleado* Que producto desea llevar?(nombre): " << endl;
-    getchar();
     getline(cin, nombreaux);
     **nombre = *&nombreaux;
     cout << "*empleado* Que marca es la del producto?: " << endl;
-    getline(cin, marcaaux);
+    cin >> marcaaux;
     **marca = *&marcaaux;
     cout << "*empleado* Cuantos necesitas?: " << endl;
     cin >> cantaux;
@@ -29,16 +28,16 @@ void empleado::paraCumpleanios(string **tamanio, string **color)
 {
     string tamanioaux, coloraux;
     cout << "*empleado* Que tamanio desea llevar?(nombre) " << endl;
-    getline(cin, tamanioaux);
+    cin >> tamanioaux;
     **tamanio = *&tamanioaux;
     cout << "*empleado* De que color quiere el producto? " << endl;
-    getline(cin, coloraux);
+    cin >> coloraux;
     **color = *&coloraux;
     return;
 }
 
-void empleado::paraDisfraz(string** talle) {
-    string talleaux;
+void empleado::paraDisfraz(int** talle) {
+    int talleaux;
     cout << "*empleado* Que talle queria?" << endl;
     cin >> talleaux;
     **talle = *&talleaux;

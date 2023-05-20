@@ -27,6 +27,8 @@ public:
 
     void reservar_disfraz();
 
+    void buscar_producto(forward_list<articulos*> lista, empleado trabajador);
+
     void agregar_carrito(forward_list<articulos*> lista, empleado trabajador);
 
     void set_medio_pago(medio_de_pago medio_pago);

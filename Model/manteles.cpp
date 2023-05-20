@@ -1,4 +1,4 @@
-/*#include "manteles.h"
+#include "manteles.h"
 
 manteles::manteles(float precio, unsigned int stock, string color, string tamanio, string marcas,string nombre) :cumpleanios(color, tamanio, precio, stock, marcas,nombre)
 {
@@ -19,4 +19,4 @@ string manteles::get_codigo()
 
 manteles::~manteles()
 {
-}*/
+}

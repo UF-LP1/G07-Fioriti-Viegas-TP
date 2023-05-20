@@ -55,22 +55,22 @@ void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajado
     {
         if ((*it)->get_marca() == *marcaBuscada && (*it)->get_nombre() == *nombreBuscado)//condicion necesaria para ubicar el objeto
         {
-            articulos* aux = *it;//paso el contenido del iterador a un auxiliar
+            articulos *aux = (*it);//paso el contenido del iterador a un auxiliar
             //repito el proceso de cumpleanios en disfraces
-            //disfraces* disfraz = dynamic_cast<disfraces*>(&aux);
-            if(dynamic_cast<disfraces*>(aux) != nullptr) {
-                string* talleBuscado = new string;
+            disfraces* disfraz = dynamic_cast<disfraces*>(aux);
+            if(/*dynamic_cast<disfraces*>(aux)*/ disfraz != nullptr) {
+                int* talleBuscado = new int;
                 trabajador.paraDisfraz(&talleBuscado);
-                if (dynamic_cast<disfraces*>(aux)->get_talles() != *talleBuscado)
+                if (*talleBuscado !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(disfraz->get_talles()))//account_num = static_cast<int>(Suit::Hearts);
                     cout << "No tenemos ese difraz en concreto." << endl;
                 delete talleBuscado;
             }
-            //cumpleanios* cumple = dynamic_cast<cumpleanios*>(&aux);//me fijo si es de tipo cumpleanios
-            if (dynamic_cast<cumpleanios*>(aux) != nullptr) {//si no lo es, entra a la condicion
+            cumpleanios* cumple = dynamic_cast<cumpleanios*>(aux);//me fijo si es de tipo cumpleanios
+            if (/*dynamic_cast<cumpleanios*>(aux)*/ cumple != nullptr) {//si no lo es, entra a la condicion
                 string* tamanioBuscado = new string;
                 string* colorBuscado = new string;
                 trabajador.paraCumpleanios(&tamanioBuscado, &colorBuscado);//mismo que en atender_mostrador
-                if (dynamic_cast<cumpleanios*>(aux)->get_color() != *colorBuscado || dynamic_cast<cumpleanios*>(aux)->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
+                if (/*dynamic_cast<cumpleanios*>(aux)*/cumple->get_color() != *colorBuscado || /*dynamic_cast<cumpleanios*>(aux)*/cumple->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
                     std::cout << "No tenemos ese producto en especifico." << endl;
                 //deleteo los punteros ya que no me sirven mas
                 delete tamanioBuscado;
