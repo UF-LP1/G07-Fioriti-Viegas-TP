@@ -40,7 +40,7 @@ void empleado::paraCumpleanios(string **tamanio, string **color)
 void empleado::paraDisfraz(string** talle) {
     string talleaux;
     cout << "*empleado* Que talle queria?" << endl;
-    getline(cin, talleaux);
+    cin >> talleaux;
     **talle = *&talleaux;
 }
 

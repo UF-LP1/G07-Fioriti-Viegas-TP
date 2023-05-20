@@ -44,50 +44,50 @@ void cliente::reservar_disfraz() {//preguntar
 * @param lista  Es la lista donde se encuentran los articulos a buscar
 * @param trabajador Es el empleado que va a atender al cliente
 */
-void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajador)
+void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajador)
 {
     //declaro las variables auxiliares principales para comparar
     string* nombreBuscado = new string;
     string* marcaBuscada = new string;
     unsigned int *cantidadBuscada = new unsigned int;
     trabajador.atender_mostrador(&nombreBuscado, &marcaBuscada, &cantidadBuscada);//paso los punteros para devolver lo que el cliente busca
-    for (forward_list<articulos>::iterator it = (*lista).begin(); it != (*lista).end(); it++)//recorro la lista con el iterador
+    for (forward_list<articulos*>::iterator it = lista.begin(); it != lista.end(); it++)//recorro la lista con el iterador
     {
-        if (it->get_marca() == *marcaBuscada && it->get_nombre() == *nombreBuscado)//condicion necesaria para ubicar el objeto
+        if ((*it)->get_marca() == *marcaBuscada && (*it)->get_nombre() == *nombreBuscado)//condicion necesaria para ubicar el objeto
         {
-            articulos aux = *it;//paso el contenido del iterador a un auxiliar
+            articulos* aux = *it;//paso el contenido del iterador a un auxiliar
             //repito el proceso de cumpleanios en disfraces
             //disfraces* disfraz = dynamic_cast<disfraces*>(&aux);
-            if(dynamic_cast<disfraces*>(&aux) != nullptr) {
+            if(dynamic_cast<disfraces*>(aux) != nullptr) {
                 string* talleBuscado = new string;
                 trabajador.paraDisfraz(&talleBuscado);
-                if (dynamic_cast<disfraces*>(&aux)->get_talles() != *talleBuscado)
+                if (dynamic_cast<disfraces*>(aux)->get_talles() != *talleBuscado)
                     cout << "No tenemos ese difraz en concreto." << endl;
                 delete talleBuscado;
             }
             //cumpleanios* cumple = dynamic_cast<cumpleanios*>(&aux);//me fijo si es de tipo cumpleanios
-            if (dynamic_cast<cumpleanios*>(&aux) != nullptr) {//si no lo es, entra a la condicion
+            if (dynamic_cast<cumpleanios*>(aux) != nullptr) {//si no lo es, entra a la condicion
                 string* tamanioBuscado = new string;
                 string* colorBuscado = new string;
                 trabajador.paraCumpleanios(&tamanioBuscado, &colorBuscado);//mismo que en atender_mostrador
-                if (dynamic_cast<cumpleanios*>(&aux)->get_color() != *colorBuscado || dynamic_cast<cumpleanios*>(&aux)->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
+                if (dynamic_cast<cumpleanios*>(aux)->get_color() != *colorBuscado || dynamic_cast<cumpleanios*>(aux)->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
                     std::cout << "No tenemos ese producto en especifico." << endl;
                 //deleteo los punteros ya que no me sirven mas
                 delete tamanioBuscado;
                 delete colorBuscado;
             }
-            if (it->get_stock() >= *cantidadBuscada)//Si supero las demas condiciones, me fijo si queda stock
+            if ((*it)->get_stock() >= *cantidadBuscada)//Si supero las demas condiciones, me fijo si queda stock
             { 
 
-                it->set_stock(it->get_stock() - *cantidadBuscada);//cambio el stock de la lista
-                (*it).set_stock(*cantidadBuscada);//le seteo la cantidad que va a tener en carrito
+                (*it)->set_stock((*it)->get_stock() - *cantidadBuscada);//cambio el stock de la lista
+                (*it)->set_stock(*cantidadBuscada);//le seteo la cantidad que va a tener en carrito
              
-                this->miCarrito.set_monto((it->get_precio() * *cantidadBuscada) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
+                this->miCarrito.set_monto(((*it)->get_precio() * *cantidadBuscada) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
                 this->miCarrito.set_cant(this->miCarrito.get_cant() + *cantidadBuscada);//cambio la cantidad de productos de carrito
                 forward_list<articulos>* aux2 = this->miCarrito.get_productos();
-                aux2->push_front((aux));//agrego el nuevo producto a carrito
+                aux2->push_front(*aux);//agrego el nuevo producto a carrito
 
-                cout << "*empleado* Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << it->get_precio() * *cantidadBuscada << endl;
+                cout << "*empleado* Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << (*it)->get_precio() * *cantidadBuscada << endl;
                 delete nombreBuscado;
                 delete marcaBuscada;
                 delete cantidadBuscada;
@@ -95,7 +95,7 @@ void cliente::agregar_carrito(forward_list<articulos>* lista, empleado trabajado
                 return;
             }
             else {
-                cout << "*empleado* Solo tenemos " << it->get_stock() << " de los " << *cantidadBuscada << " que usted pidio." << endl;
+                cout << "*empleado* Solo tenemos " << (*it)->get_stock() << " de los " << *cantidadBuscada << " que usted pidio." << endl;
                 delete nombreBuscado;
                 delete marcaBuscada;
                 delete cantidadBuscada;
