@@ -3,20 +3,20 @@
 #ifndef _ARTICULOS_H
 #define _ARTICULOS_H
 
+enum articulo { cotillones, cumple, reposterias, disfraz, golosina, mantelito};
+
 class articulos {
 public:
 
-    articulos(string marca,string nombre,float precio, unsigned int stock);
+    articulos(string marca,float precio, unsigned int stock);
 
-    articulos(string marca, string nombre);
+    articulos(string marca);
 
     articulos();
 
     virtual void set_codigo() {};
 
     float get_precio();
-
-    string get_nombre();
 
     unsigned int get_stock();
 
@@ -32,7 +32,6 @@ protected:
     float precio;
     unsigned int stock;
      string marca;
-     string nombre;
      string codigo;
 };
 #endif //_ARTICULOS_H

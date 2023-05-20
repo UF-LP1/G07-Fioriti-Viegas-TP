@@ -1,6 +1,6 @@
 #include "golosinas.h"
 
-golosinas::golosinas(string marca, float precio, unsigned int stock,string nombre) :articulos(marca,nombre)
+golosinas::golosinas(string marca, float precio, unsigned int stock, tipo_golosina nombre) :articulos(marca)
 {
     this->precio = precio;
     this->stock = stock;
@@ -17,6 +17,11 @@ void golosinas::set_codigo()
 string golosinas::get_codigo()
 {
     return this->codigo;
+}
+
+tipo_golosina golosinas::get_nombre()
+{
+    return this->nombre;
 }
 
 

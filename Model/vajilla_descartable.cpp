@@ -1,7 +1,7 @@
 #include "vajilla_descartable.h"
 
 
-vajilla_descartable::vajilla_descartable(float precio, unsigned int stock, string tamanio, string color, string marca,string nombre) :cumpleanios(color, tamanio, precio, stock, marca,nombre)
+vajilla_descartable::vajilla_descartable(float precio, unsigned int stock, tamanios tamanio, string color, string marca, vajilla nombre) :cumpleanios(color, tamanio, precio, stock, marca)
 {
 }
 
@@ -17,7 +17,7 @@ string vajilla_descartable::get_codigo()
 {
     return this->codigo;
 }
-/*
+
 vajilla vajilla_descartable::get_vajilla()
 {
     return this->producto;
@@ -27,7 +27,7 @@ void vajilla_descartable::set_vajilla(vajilla producto)
 {
     this->producto = producto;
 }
-*/
+
 vajilla_descartable::~vajilla_descartable()
 {
 }

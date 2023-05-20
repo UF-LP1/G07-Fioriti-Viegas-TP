@@ -8,7 +8,7 @@
 class globos : public cumpleanios {
 public:
 
-    globos(string color, unsigned int stock, float precio, string tamanio, string  marca,string nombre);
+    globos(string color, unsigned int stock, float precio, tamanios tamanio, string  marca);
 
     void set_codigo();
 

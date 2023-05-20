@@ -1,6 +1,6 @@
 #include "cumpleanios.h"
 
-cumpleanios::cumpleanios(string color, string tamanio, float precio, unsigned int stock, string marca,string nombre) :articulos(marca,nombre) {
+cumpleanios::cumpleanios(string color, tamanios tamanio, float precio, unsigned int stock, string marca) :articulos(marca) {
     this->precio = precio;
     this->stock = stock;
 }
@@ -18,6 +18,6 @@ string cumpleanios::get_color() {
     return this->color;
 }
 
-string cumpleanios::get_tamanio() {
+tamanios cumpleanios::get_tamanio() {
     return this->tamanio;
 }

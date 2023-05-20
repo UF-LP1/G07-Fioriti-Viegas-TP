@@ -5,12 +5,12 @@ reposteria::~reposteria() {
 
 }
 
-reposteria::reposteria(float precio, unsigned int stock, string marca,string nombre) :articulos(marca,nombre)
+reposteria::reposteria(float precio, unsigned int stock, string marca, molde molde , decoracion_repostera decoracion) :articulos(marca)
 {
     this->precio = precio;
     this->stock = stock;
-    /*this->tipo_decorado = ninguna;
-    this->tipo_molde = ninguno;*/
+    this->tipo_decorado = ninguna;
+    this->tipo_molde = ninguno;
 }
 
 void reposteria::set_codigo()
@@ -25,7 +25,7 @@ string reposteria::get_codigo()
 {
     return this->codigo;
 }
-/*
+
 molde reposteria::get_molde()
 {
     return this->tipo_molde;
@@ -45,4 +45,3 @@ void reposteria::set_repostera(decoracion_repostera repostera)
 {
     this->tipo_decorado = repostera;
 }
-*/

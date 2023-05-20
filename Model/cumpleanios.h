@@ -4,11 +4,12 @@
 
 #include "articulos.h"
 
+enum tamanios { chico, medio, grande };
 
 class cumpleanios : public articulos {
 public:
 
-    cumpleanios(string color, string tamanio, float precio, unsigned int stock, string  marca,string nombre);
+    cumpleanios(string color, tamanios tamanio, float precio, unsigned int stock, string  marca);
 
     ~cumpleanios();
 
@@ -16,10 +17,10 @@ public:
 
     string get_color();
 
-    string get_tamanio();
+    tamanios get_tamanio();
 protected:
-    string const color;
-    string const tamanio;
+    string color;
+    tamanios tamanio;
 };
 
 #endif //_CUMPLEAÑOS_H

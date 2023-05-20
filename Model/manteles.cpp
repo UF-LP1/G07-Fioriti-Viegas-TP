@@ -1,8 +1,8 @@
 #include "manteles.h"
 
-manteles::manteles(float precio, unsigned int stock, string color, string tamanio, string marcas,string nombre) :cumpleanios(color, tamanio, precio, stock, marcas,nombre)
+manteles::manteles(float precio, unsigned int stock, string color, tamanios tamanio, string marcas, mantel nombre) :cumpleanios(color, tamanio, precio, stock, marcas)
 {
-
+    this->tipo = nombre;
 }
 
 void manteles::set_codigo()

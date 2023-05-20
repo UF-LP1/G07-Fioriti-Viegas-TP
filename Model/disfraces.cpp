@@ -1,6 +1,6 @@
 #include "disfraces.h"
 
-disfraces::disfraces(float precio, unsigned int stock, string marca, string nombre, talles talle) :articulos(marca, nombre) {
+disfraces::disfraces(float precio, unsigned int stock, string marca, string nombre, talles talle) :articulos(marca) {
 
 	this->precio = precio;
 	this->stock = stock;

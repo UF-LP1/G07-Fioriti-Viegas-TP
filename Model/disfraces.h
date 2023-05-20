@@ -21,6 +21,7 @@ public:
     ~disfraces();
 private:
     talles talle;
+    string personaje;
 };
 
 #endif //_DISFRACES_H
