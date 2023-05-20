@@ -17,6 +17,11 @@ string manteles::get_codigo()
     return this->codigo;
 }
 
+mantel manteles::get_tipo()
+{
+    return this->tipo; 
+}
+
 manteles::~manteles()
 {
 }

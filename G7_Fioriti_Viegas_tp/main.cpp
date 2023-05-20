@@ -19,17 +19,17 @@ using namespace std;
 int main()  {
     srand(time(NULL));
     establecimiento lugar("Don Manolo", "Av. Cabildo 3093", "De lunes a viernes de 9:00 AM a 17:00 PM", "Sabados de 8:00 AM a 14:00 PM", "54 9 236 434-6284");
-    cotillon producto(10.0, 20, "disfrazate", "mascara");
-    cotillon producto1(14.5, 15, "papelito", "papel_picado");
-    cotillon producto2(5.0, 30, "laLuz", "fluorescentes");
-    cotillon producto3(2.3, 13, "espumin", "espuma");
+    cotillon producto(10.0, 20, "disfrazate", mascara);
+    cotillon producto1(14.5, 15, "papelito", papel_picado);
+    cotillon producto2(5.0, 30, "laLuz", fluorescentes);
+    cotillon producto3(2.3, 13, "espumin", espuma);
     disfraces producto4(30.0,3, "disfrazate", "disfraz de batman", XS);
-    globos producto5("amarillo", 20, 1.0, "chico", "bombucha", "globo");
-    golosinas producto6("fellfort", 1.0, 50, "caramelo");
-    manteles producto7(5.0, 5, "violeta", "10 m2", "mantelito", "mantel de cumpleaños");
-    reposteria producto8(3.0,45,"moldeate","molde de torta");
-    reposteria producto9(5.0, 34, "moldeate", "chocolate");
-    vajilla_descartable producto10(6.5, 34, "chiquito", "rojo", "tusVajillas", "vaso");
+    globos producto5("amarillo", 20, 1.0, chico, "bombucha");
+    golosinas producto6("fellfort", 1.0, 50, caramelo);
+    manteles producto7(5.0, 5, "violeta", medio , "mantelito", superheroes);
+    reposteria producto8(3.0, 45 , "moldeate" , cupcakes, chocolates);
+    reposteria producto9(5.0, 34, "moldeate", pan_dulce, grana);
+    vajilla_descartable producto10(6.5, 34, grande, "rojo", "tusVajillas", vaso);
     forward_list<articulos*> lista;
     lista.push_front(&producto);
     lista.push_front(&producto1);
@@ -50,7 +50,7 @@ int main()  {
     string condicion;
     bool ganas = true;
     while (ganas) {
-        buta.agregar_carrito(lista,martin);
+        buta.agregar_carrito(lista, martin, disfraz);
         system("cls");
         cout << "*Pensamiento interior de " << buta.get_nombre() << "*" << endl;
         cout << "Tengo ganas de algo mas?" << endl;

@@ -13,13 +13,17 @@ public:
 
     void atender_mostrador(string **nombre, string **marca, unsigned int **cant);
 
-    void paraCumpleanios(string **tamanio, string **color);
+    void paraCumpleanios(int **tamanio, string **color);
 
     void paraDisfraz(int** talle);
 
     void terminar_interaccion();
 
     ~empleado();
+
+    void paraManteles(int** tipo);
+
+    void paraReposteria(int** decoracion, int** molde); 
 };
 
 #endif //_EMPLEADO_H

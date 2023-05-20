@@ -8,7 +8,7 @@
 class vajilla_descartable : public cumpleanios {
 public:
 
-    vajilla_descartable(float precio, unsigned int stock, tamanios tamanio, string color, string marca,vajilla nombre);
+    vajilla_descartable(float precio, unsigned int stock, tamanios tamanio, string color, string marca, vajilla nombre);
 
     void set_codigo();
 

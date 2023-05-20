@@ -28,6 +28,8 @@ public:
 
     ~articulos();
 
+    // string get_nombre(); 
+
 protected:
     float precio;
     unsigned int stock;

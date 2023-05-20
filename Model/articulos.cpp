@@ -31,7 +31,6 @@ string articulos::get_marca()
     return this->marca;
 }
 
-
 void articulos::set_precio(float precio) {
     this->precio;
     return;

@@ -1,6 +1,6 @@
 #ifndef _MANTELES_H
 #define _MANTELES_H
-#include "matel.h"
+#include "mantel.h"
 #include "cumpleanios.h"
 
 class manteles : public cumpleanios {
@@ -11,6 +11,8 @@ public:
     void set_codigo();
 
     string get_codigo();
+
+    mantel get_tipo();
 
     ~manteles();
 private:

@@ -4,7 +4,7 @@
 
 #include "articulos.h"
 
-enum tamanios { chico, medio, grande };
+enum tamanios {chico,medio,grande};
 
 class cumpleanios : public articulos {
 public:

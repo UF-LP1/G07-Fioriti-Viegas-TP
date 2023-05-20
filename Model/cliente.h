@@ -13,7 +13,9 @@
 #include "cumpleanios.h"
 #include "encargado.h"
 #include "golosinas.h"
-
+#include "cotillon.h"
+#include "reposteria.h"
+#include "manteles.h"
 
 class cliente : public persona {
 public:

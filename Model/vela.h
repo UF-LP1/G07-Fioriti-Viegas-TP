@@ -7,7 +7,7 @@
 class vela : public cumpleanios {
 public:
 
-    vela(string tamanio, float precio, unsigned int stock, string color,string marca);
+    vela(tamanios tamanio, float precio, unsigned int stock, string color,string marca);
 
     void set_codigo();
 
