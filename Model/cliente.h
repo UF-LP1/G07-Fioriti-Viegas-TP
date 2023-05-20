@@ -16,6 +16,7 @@
 #include "cotillon.h"
 #include "reposteria.h"
 #include "manteles.h"
+#include "articulos.h"
 
 class cliente : public persona {
 public:

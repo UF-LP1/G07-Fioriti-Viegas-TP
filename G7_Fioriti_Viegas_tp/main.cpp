@@ -50,6 +50,7 @@ int main()  {
     string condicion;
     bool ganas = true;
     while (ganas) {
+        buta.buscar_producto(martin);
         buta.agregar_carrito(lista, martin, disfraz);
         system("cls");
         cout << "*Pensamiento interior de " << buta.get_nombre() << "*" << endl;

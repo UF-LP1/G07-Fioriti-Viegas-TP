@@ -38,9 +38,9 @@ void cliente::reservar_disfraz() {//preguntar
     return;
 }
 
-articulo cliente::buscar_producto(empleado trabajador)
-{
-    return articulo();
+articulo cliente::buscar_producto(empleado trabajador) {
+    articulo buscado = trabajador.tipo_producto();
+    return buscado;
 }
 
 /*
@@ -52,10 +52,9 @@ articulo cliente::buscar_producto(empleado trabajador)
 void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajador, articulo buscado)
 {
     //declaro las variables auxiliares principales para comparar
-    string* nombreBuscado = new string;
     string* marcaBuscada = new string;
     unsigned int *cantidadBuscada = new unsigned int;
-    trabajador.atender_mostrador(&nombreBuscado, &marcaBuscada, &cantidadBuscada);//paso los punteros para devolver lo que el cliente busca
+    trabajador.atender_mostrador(&marcaBuscada, &cantidadBuscada);//paso los punteros para devolver lo que el cliente busca
     for (forward_list<articulos*>::iterator it = lista.begin(); it != lista.end(); it++)//recorro la lista con el iterador
     {
         if ((*it)->get_marca() == *marcaBuscada)//condicion necesaria para ubicar el objeto
@@ -87,6 +86,31 @@ void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajado
                 if (*tipomantelBuscado !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(mantel_->get_tipo()))//account_num = static_cast<int>(Suit::Hearts);
                     cout << "No tenemos ese mantel en concreto." << endl;
                 delete tipomantelBuscado;
+            }
+
+            if (buscado == reposterias)
+            {
+                cumpleanios* cumple = dynamic_cast<cumpleanios*>(aux);//me fijo si es de tipo cumpleanios
+                if (/*dynamic_cast<cumpleanios*>(aux)*/ cumple != nullptr) {//si no lo es, entra a la condicion
+                    int* tamanioBuscado = new int;
+                    string* colorBuscado = new string;
+                    trabajador.paraCumpleanios(&tamanioBuscado, &colorBuscado);//mismo que en atender_mostrador
+                    if (/*dynamic_cast<cumpleanios*>(aux)*/cumple->get_color() != *colorBuscado || /*dynamic_cast<cumpleanios*>(aux)*/*tamanioBuscado != static_cast<int>(cumple->get_tamanio()))  //me fijo si cumple con lo que pide el cliente
+                        std::cout << "No tenemos ese producto en especifico." << endl;
+                    //deleteo los punteros ya que no me sirven mas
+                    delete tamanioBuscado;
+                    delete colorBuscado;
+                }
+
+            if (buscado == cotillones) {
+                cotillon* coti = dynamic_cast<cotillon*>(aux);
+                if (/*dynamic_cast<disfraces*>(aux)*/ coti != nullptr) {
+                    int* cotillonBuscado = new int;
+                    trabajador.paraCotillon(&cotillonBuscado);
+                    if (*cotillonBuscado !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(coti->get_cotillon()))//account_num = static_cast<int>(Suit::Hearts);
+                        cout << "No tenemos ese difraz en concreto." << endl;
+                    delete cotillonBuscado;
+                }
             }
             reposteria* reposteria_ = dynamic_cast<reposteria*>(aux);
             if (/*dynamic_cast<disfraces*>(aux)*/ reposteria_ != nullptr) {

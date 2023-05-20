@@ -8,13 +8,16 @@ void empleado::llamar_cliente(unsigned int numero_orden)
 {
     cout << "*empleado* Cliente: " << numero_orden << endl;
 }
-
-void empleado::atender_mostrador(string **nombre, string **marca, unsigned int **cant) {
-    string nombreaux, marcaaux;
+//enum articulo { cotillones, cumple, reposterias, disfraz, golosina, mantelito};
+articulo empleado::tipoProducto() {
+    cout << "Ingrese 0 si quiere tipo cotillon " << endl;
+    cout << "Ingrese 1 si quiere tipo globo, vela o vajilla " << endl;
+    cout << "Ingrese 2 si quiere tipo reposteria" << endl;
+    cout << 
+}
+void empleado::atender_mostrador( string **marca, unsigned int **cant) {
+    string marcaaux;
     unsigned int cantaux;
-    cout << "*empleado* Que producto desea llevar?(nombre): " << endl;
-    getline(cin, nombreaux);
-    **nombre = *&nombreaux;
     cout << "*empleado* Que marca es la del producto?: " << endl;
     cin >> marcaaux;
     **marca = *&marcaaux;
@@ -62,6 +65,18 @@ void empleado::paraReposteria(int** decoracion, int** molde) {
     **decoracion = *&tipoDecoracion_aux;
     **molde = *&tipoMolde_aux; 
     return;
+}
+
+void empleado::paraCotillon(int** cotillon) {
+    int cotillonaux;
+    cout << "Ingrese 0 para mascara " << endl;//mascara, papel_picado, espuma, fluorescentes, luminosos, carteles_carton
+    cout << "Ingrese 1 para papel picado" << endl;
+    cout << "Ingrese 2 para espuma" << endl;
+    cout << "Ingrese 3 para fluorescentes" << endl;
+    cout << "Ingrese 4 para luminosos" << endl;
+    cout << "Ingrese 5 para crateles de carton" << endl;
+    cin >> cotillonaux;
+    **cotillon = *&cotillonaux;
 }
 
 void empleado::terminar_interaccion()

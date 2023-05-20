@@ -3,6 +3,7 @@
 #define _EMPLEADO_H
 
 #include "trabajador.h"
+#include "articulos.h"
 
 class empleado : public trabajador {
 public:
@@ -11,7 +12,9 @@ public:
 
     void llamar_cliente(unsigned int numero_orden);
 
-    void atender_mostrador(string **nombre, string **marca, unsigned int **cant);
+    void atender_mostrador(string **marca, unsigned int **cant);
+
+    articulo tipo_producto();
 
     void paraCumpleanios(int **tamanio, string **color);
 
@@ -23,7 +26,10 @@ public:
 
     void paraManteles(int** tipo);
 
-    void paraReposteria(int** decoracion, int** molde); 
+    void paraReposteria(int** decoracion, int** molde);
+
+    void paraCotillon(int** cotillon);
+
 };
 
 #endif //_EMPLEADO_H
