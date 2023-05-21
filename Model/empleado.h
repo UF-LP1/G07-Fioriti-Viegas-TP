@@ -4,6 +4,7 @@
 
 #include "trabajador.h"
 #include "articulos.h"
+#include <istream>
 
 class empleado : public trabajador {
 public:
@@ -13,8 +14,8 @@ public:
     void llamar_cliente(unsigned int numero_orden);
 
     void atender_mostrador(string **marca, unsigned int **cant);
-
-    articulo tipo_producto();
+    
+    int tipo_producto();
 
     void paraCumpleanios(int **tamanio, string **color);
 

@@ -9,11 +9,16 @@ void empleado::llamar_cliente(unsigned int numero_orden)
     cout << "*empleado* Cliente: " << numero_orden << endl;
 }
 //enum articulo { cotillones, cumple, reposterias, disfraz, golosina, mantelito};
-articulo empleado::tipoProducto() {
+int empleado::tipo_producto() {
+    int tipoProductoaux; 
     cout << "Ingrese 0 si quiere tipo cotillon " << endl;
     cout << "Ingrese 1 si quiere tipo globo, vela o vajilla " << endl;
     cout << "Ingrese 2 si quiere tipo reposteria" << endl;
-    cout << 
+    cout << "Ingrese 3 si quiere tipo disfraz" << endl;
+    cout << "Ingrese 4 si quiere tipo golosina" << endl;
+    cout << "Ingrese 5 si quiere tipo mantelito" << endl; 
+    cin >> tipoProductoaux; 
+    return tipoProductoaux; 
 }
 void empleado::atender_mostrador( string **marca, unsigned int **cant) {
     string marcaaux;

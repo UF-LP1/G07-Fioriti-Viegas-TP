@@ -39,7 +39,8 @@ void cliente::reservar_disfraz() {//preguntar
 }
 
 articulo cliente::buscar_producto(empleado trabajador) {
-    articulo buscado = trabajador.tipo_producto();
+   
+    articulo buscado = static_cast<articulo>(trabajador.tipo_producto());
     return buscado;
 }
 
@@ -53,16 +54,17 @@ void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajado
 {
     //declaro las variables auxiliares principales para comparar
     string* marcaBuscada = new string;
-    unsigned int *cantidadBuscada = new unsigned int;
+    string* nombreBuscado = new string;
+    unsigned int* cantidadBuscada = new unsigned int;
     trabajador.atender_mostrador(&marcaBuscada, &cantidadBuscada);//paso los punteros para devolver lo que el cliente busca
     for (forward_list<articulos*>::iterator it = lista.begin(); it != lista.end(); it++)//recorro la lista con el iterador
     {
         if ((*it)->get_marca() == *marcaBuscada)//condicion necesaria para ubicar el objeto
         {
-            articulos *aux = (*it);//paso el contenido del iterador a un auxiliar
+            articulos* aux = (*it);//paso el contenido del iterador a un auxiliar
             //repito el proceso de cumpleanios en disfraces
             disfraces* disfraz = dynamic_cast<disfraces*>(aux);
-            if(/*dynamic_cast<disfraces*>(aux)*/ disfraz != nullptr) {
+            if (/*dynamic_cast<disfraces*>(aux)*/ disfraz != nullptr) {
                 int* talleBuscado = new int;
                 trabajador.paraDisfraz(&talleBuscado);
                 if (*talleBuscado !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(disfraz->get_talles()))//account_num = static_cast<int>(Suit::Hearts);
@@ -77,9 +79,9 @@ void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajado
                 if (/*dynamic_cast<cumpleanios*>(aux)*/cumple->get_color() != *colorBuscado || /*dynamic_cast<cumpleanios*>(aux)*/cumple->get_tamanio() != *tamanioBuscado) //me fijo si cumple con lo que pide el cliente
                     std::cout << "No tenemos ese producto en especifico." << endl;
                 //deleteo los punteros ya que no me sirven mas
-                delete tamanioBuscado;                delete colorBuscado; 
+                delete tamanioBuscado;                delete colorBuscado;
             }
-            manteles* mantel_ = dynamic_cast<manteles*>(aux); 
+            manteles* mantel_ = dynamic_cast<manteles*>(aux);
             if (/*dynamic_cast<disfraces*>(aux)*/ mantel_ != nullptr) {
                 int* tipomantelBuscado = new int;
                 trabajador.paraManteles(&tipomantelBuscado);
@@ -102,59 +104,60 @@ void cliente::agregar_carrito(forward_list<articulos*> lista, empleado trabajado
                     delete colorBuscado;
                 }
 
-            if (buscado == cotillones) {
-                cotillon* coti = dynamic_cast<cotillon*>(aux);
-                if (/*dynamic_cast<disfraces*>(aux)*/ coti != nullptr) {
-                    int* cotillonBuscado = new int;
-                    trabajador.paraCotillon(&cotillonBuscado);
-                    if (*cotillonBuscado !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(coti->get_cotillon()))//account_num = static_cast<int>(Suit::Hearts);
-                        cout << "No tenemos ese difraz en concreto." << endl;
-                    delete cotillonBuscado;
+                if (buscado == cotillones) {
+                    cotillon* coti = dynamic_cast<cotillon*>(aux);
+                    if (/*dynamic_cast<disfraces*>(aux)*/ coti != nullptr) {
+                        int* cotillonBuscado = new int;
+                        trabajador.paraCotillon(&cotillonBuscado);
+                        if (*cotillonBuscado !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(coti->get_cotillon()))//account_num = static_cast<int>(Suit::Hearts);
+                            cout << "No tenemos ese difraz en concreto." << endl;
+                        delete cotillonBuscado;
+                    }
+                }
+                reposteria* reposteria_ = dynamic_cast<reposteria*>(aux);
+                if (/*dynamic_cast<disfraces*>(aux)*/ reposteria_ != nullptr) {
+                    int* tipodecoracionBuscada = new int;
+                    int* tipomoldeBuscado = new int;
+                    trabajador.paraReposteria(&tipodecoracionBuscada, &tipomoldeBuscado);
+                    if (*tipodecoracionBuscada !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(reposteria_->get_repostera()) || *tipomoldeBuscado != /*dynamic_cast<disfraces*>(aux)*/static_cast<int>(reposteria_->get_molde()))//account_num = static_cast<int>(Suit::Hearts);
+                        cout << "No tenemos esa decoracion respostera en concreto." << endl;
+                    delete tipodecoracionBuscada;
+                    delete tipomoldeBuscado;
+                }
+
+                if ((*it)->get_stock() >= *cantidadBuscada)//Si supero las demas condiciones, me fijo si queda stock
+                {
+
+                    (*it)->set_stock((*it)->get_stock() - *cantidadBuscada);//cambio el stock de la lista
+                    (*it)->set_stock(*cantidadBuscada);//le seteo la cantidad que va a tener en carrito
+
+                    this->miCarrito.set_monto(((*it)->get_precio() * *cantidadBuscada) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
+                    this->miCarrito.set_cant(this->miCarrito.get_cant() + *cantidadBuscada);//cambio la cantidad de productos de carrito
+                    forward_list<articulos>* aux2 = this->miCarrito.get_productos();
+                    aux2->push_front(*aux);//agrego el nuevo producto a carrito
+
+                    cout << "*empleado* Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << (*it)->get_precio() * *cantidadBuscada << endl;
+                    delete nombreBuscado;
+                    delete marcaBuscada;
+                    delete cantidadBuscada;
+                    //delete aux;
+                    return;
+                }
+                else {
+                    cout << "*empleado* Solo tenemos " << (*it)->get_stock() << " de los " << *cantidadBuscada << " que usted pidio." << endl;
+                    delete nombreBuscado;
+                    delete marcaBuscada;
+                    delete cantidadBuscada;
+                    //delete aux;
+                    return;
                 }
             }
-            reposteria* reposteria_ = dynamic_cast<reposteria*>(aux);
-            if (/*dynamic_cast<disfraces*>(aux)*/ reposteria_ != nullptr) {
-                int* tipodecoracionBuscada = new int;
-                int* tipomoldeBuscado = new int; 
-                trabajador.paraReposteria(&tipodecoracionBuscada,&tipomoldeBuscado);
-                if (*tipodecoracionBuscada !=/*dynamic_cast<disfraces*>(aux)*/static_cast<int>(reposteria_->get_repostera()) || *tipomoldeBuscado != /*dynamic_cast<disfraces*>(aux)*/static_cast<int>(reposteria_->get_molde()))//account_num = static_cast<int>(Suit::Hearts);
-                    cout << "No tenemos esa decoracion respostera en concreto." << endl;
-                delete tipodecoracionBuscada;
-                delete tipomoldeBuscado; 
-            }
-
-            if ((*it)->get_stock() >= *cantidadBuscada)//Si supero las demas condiciones, me fijo si queda stock
-            { 
-
-                (*it)->set_stock((*it)->get_stock() - *cantidadBuscada);//cambio el stock de la lista
-                (*it)->set_stock(*cantidadBuscada);//le seteo la cantidad que va a tener en carrito
-             
-                this->miCarrito.set_monto(((*it)->get_precio() * *cantidadBuscada) + this->miCarrito.get_monto());//cambio el valor del monto total del carrito
-                this->miCarrito.set_cant(this->miCarrito.get_cant() + *cantidadBuscada);//cambio la cantidad de productos de carrito
-                forward_list<articulos>* aux2 = this->miCarrito.get_productos();
-                aux2->push_front(*aux);//agrego el nuevo producto a carrito
-
-                cout << "*empleado* Se agregaron " << *cantidadBuscada << " productos al carrito por un precio total de $" << (*it)->get_precio() * *cantidadBuscada << endl;
-                delete nombreBuscado;
-                delete marcaBuscada;
-                delete cantidadBuscada;
-                //delete aux;
-                return;
-            }
-            else {
-                cout << "*empleado* Solo tenemos " << (*it)->get_stock() << " de los " << *cantidadBuscada << " que usted pidio." << endl;
-                delete nombreBuscado;
-                delete marcaBuscada;
-                delete cantidadBuscada;
-                //delete aux;
-                return;
-            }
         }
+        std::cout << "*empleado* No tenemos ese producto en venta en este momento." << endl;
+        delete nombreBuscado;
+        delete marcaBuscada;
+        delete cantidadBuscada;
     }
-    std::cout << "*empleado* No tenemos ese producto en venta en este momento." << endl;
-    delete nombreBuscado;
-    delete marcaBuscada;
-    delete cantidadBuscada;
 }
 
 

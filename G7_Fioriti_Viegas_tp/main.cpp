@@ -62,7 +62,7 @@ int main()  {
     system("cls");
     martin.terminar_interaccion();
 
-    //fede.cobrar(buta.get_carrito()); 
+    // fede.cobrar(buta.get_carrito(),buta.get_cant_dinero); 
 
     return 0;
 }

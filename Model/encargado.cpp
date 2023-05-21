@@ -5,14 +5,13 @@ encargado::encargado(string nombre, string apellido, string dni, float sueldo) :
 }
 
 void encargado::cobrar(carrito* producto,float* dinero ) {
-    /*cout << "Buenas, serian " << (*producto).get_monto() << "$ en total" << endl;
+    cout << "Buenas, serian " << (*producto).get_monto() << "$ en total" << endl;
     if ((*producto).get_monto() < *dinero) {
         *dinero = *dinero - (*producto).get_monto();
-        producto.
     }
     else {
         cout << "*encargado* No tiene saldo suficiente." << endl;
-    }*/
+    }
     return;
 }
 
